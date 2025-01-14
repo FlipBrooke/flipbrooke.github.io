@@ -1,0 +1,68 @@
+body {
+    background-color: #f0f6f0;
+}
+
+h1 {
+    color: #222323;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+h2{
+    color: #222323;
+    text-align: center;
+    font-family: sans-serif;
+    
+}
+
+h3{
+    color: #222323;
+    text-align: center;
+    font-family: sans-serif; 
+}
+p {
+    color: #222323;
+    text-align: center;
+    font-family: sans-serif;
+    padding-left: 10em;
+    padding-right: 10em; 
+}
+
+img {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width:20%;
+}
+
+button {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width:20%;
+}
+
+.linkbutton {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    /*optional*/
+    font-family: arial, sans-serif;
+    /*input has OS specific font-family*/
+    color: #069;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+a{
+    color: #222323;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+input{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width:50px;  
+}
