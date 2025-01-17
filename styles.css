@@ -1,68 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --accent-color: #3498db;
+    --text-color: black;
+    --font-size-base: 16px;
+    --line-height: 1.5;
+    --font-family: sans-serif;
+    --light-text-color: white;
+}
+
 body {
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height);
+    color: var(--text-color);
     background-color: #f0f6f0;
+    line-height: var(--line-height);
 }
 
-h1 {
-    color: #222323;
-    text-align: center;
-    font-family: sans-serif;
-}
+h1,
+h2,
+h3 {
+    margin-bottom: 0.5rem;
+} 
 
-h2{
-    color: #222323;
-    text-align: center;
-    font-family: sans-serif;
-    
-}
-
-h3{
-    color: #222323;
-    text-align: center;
-    font-family: sans-serif; 
-}
 p {
-    color: #222323;
-    text-align: center;
+    text-align: left;
+    color: var(--text-color);
     font-family: sans-serif;
-    padding-left: 10em;
-    padding-right: 10em; 
+    padding:10px 20%;
+    margin: auto;
+
 }
 
 img {
-    display:block;
+    display: block;
     margin-left: auto;
     margin-right: auto;
-    width:20%;
+    width: 20%;
+    border-radius: 25%;
 }
 
 button {
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-    width:20%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--accent-color);
+    margin: 10px;
+    color: var(--light-text-color)
 }
 
-.linkbutton {
-    background: none!important;
+.button {
+    padding: 10px;
+    border-radius: 10px;
     border: none;
-    padding: 0!important;
-    /*optional*/
-    font-family: arial, sans-serif;
-    /*input has OS specific font-family*/
-    color: #069;
-    text-decoration: underline;
-    cursor: pointer;
-  }
+    background-color: var(--accent-color);
+    margin: 10px;
+    color: var(--light-text-color)
+}
+
+input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+}
+
+.container{
+    border: 3px solid var(--accent-color);
+    max-width: 30em;
+    margin: auto;
+}
 
 a{
-    color: #222323;
-    text-align: center;
-    font-family: sans-serif;
-}
-
-input{
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-    width:50px;  
+    color: var(--text-color);
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>FlipBrooke.github.io</title>
+    <title>flipbrooke.github.io</title>
 
     <link rel="stylesheet" href="styles.css">
 
@@ -14,57 +14,57 @@
 
         <img src="/Images/profile.jpg">
 
-        <h2>About</h2>
+        <h2>Welcome to FlipBrooke.github.io!</h2>
         <p>
-            Welcome to [Domain.tld]!
-        <p>
-            I'm FlipBrooke, a programmer and creator of things on the internet.
+            I'm FlipBrooke, a creator of things on the internet.
+            I made this website, which is open source hosted on <a href="https://pages.github.com/"> GitHub Pages.</a> 
+            I'm a programmer and linguistic hobbyist.
         </p>
         <p>
             Some people don't realize my name's a pun on <a href="https://en.wikipedia.org/wiki/Flip_book">"flip
                 book"</a>, The most perfect animation technique ever made!
         </p>
 
-        <br>
-        <p>I'm currently living in: America 🇺🇸</p>
-        <p>My time is currently <span id="myTime"></span></p>
+        <div class="container">
+            <p style="text-align: center;padding:10px 10%">I'm currently living in: The United States 🇺🇸</p>
+            <p style="text-align: center;padding:10px 10%">My time is currently <span id="myTime"></span></p>
 
-        <script>
-            const timeElement = document.getElementById('myTime');
-            const toggleButton = document.getElementById('toggleTimeFormat');
-            let is24Hour = false;
+            <script>
+                const timeElement = document.getElementById('myTime');
+                const toggleButton = document.getElementById('toggleTimeFormat');
+                let is24Hour = false;
 
-            function updateTime() {
-                timeElement.textContent = new Intl.DateTimeFormat('en-US', {
-                    timeZone: 'America/Denver',
-                    timeStyle: 'medium',
-                    hour12: !is24Hour
-                }).format(new Date());
-            }
-
-            setInterval(updateTime, 50);
-            updateTime();
-
-            function toggleTimeFormat() {
-                is24Hour = !is24Hour;
-                updateTime();
-                if (is24Hour) {
-                    document.getElementById("toggleTimeFormat").innerHTML = "Use 24-hour time";
-                } else {
-                    document.getElementById("toggleTimeFormat").innerHTML = "Use 12-hour time";
+                function updateTime() {
+                    timeElement.textContent = new Intl.DateTimeFormat('en-US', {
+                        timeZone: 'America/Denver',
+                        timeStyle: 'medium',
+                        hour12: !is24Hour
+                    }).format(new Date());
                 }
-            }
-        </script>
 
-        <button id="toggleTimeFormat" onclick="toggleTimeFormat()">Use 24-hour time</button>
+                setInterval(updateTime, 50);
+                updateTime();
 
+                function toggleTimeFormat() {
+                    is24Hour = !is24Hour;
+                    updateTime();
+                    if (is24Hour) {
+                        document.getElementById("toggleTimeFormat").innerHTML = "Use 24-hour time";
+                    } else {
+                        document.getElementById("toggleTimeFormat").innerHTML = "Use 12-hour time";
+                    }
+                }
+            </script>
+
+            <button id="toggleTimeFormat" onclick="toggleTimeFormat()">Use 24-hour time</button>
+        </div>
         <h2>Projects</h2>
         <h3>Mods</h3>
         <h3>Art</h3>
 
         <h2>You can reach me via...</h2>
-        <a><b>Discord</b></a>
-        <button onclick="copyDiscord()"><b>Copy</b></button>
+        <a style=".button"><b>Discord</b></a>
+        <button onclick="copyDiscord()" style=".linkbutton"><b>Copy</b></button>
         <script>
             function copyDiscord() {
 
@@ -80,8 +80,8 @@
 
     </main>
 
-    <footer style="text-align: left;">
-        <p>© 2024-
+    <footer>
+        <p style="text-align: center">Copyright © 2024-
             <script>document.write(new Date().getFullYear())</script> FlipBrooke
         </p>
     </footer>
