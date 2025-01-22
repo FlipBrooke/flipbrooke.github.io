@@ -23,19 +23,22 @@ body {
     line-height: var(--line-height);
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     margin-bottom: 0.5rem;
-} 
+}
 
 p {
     text-align: left;
     color: var(--text-color);
     font-family: sans-serif;
-    padding:10px 20%;
+    padding: 10px 20%;
     margin: auto;
+}
 
+.logo {
+    width: 30px;
+    height: auto;
+    margin-left: 10px;
 }
 
 img {
@@ -43,6 +46,7 @@ img {
     margin-left: auto;
     margin-right: auto;
     width: 20%;
+    height: auto;
     border-radius: 25%;
 }
 
@@ -52,16 +56,27 @@ button {
     border: none;
     background-color: var(--accent-color);
     margin: 10px;
-    color: var(--light-text-color)
+    color: var(--light-text-color);
 }
 
 .linkbutton {
+    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
     padding: 10px;
     border-radius: 10px;
     border: none;
     background-color: var(--accent-color);
-    margin: 10px;
-    color: var(--light-text-color)
+    color: var(--light-text-color);
+    width: 150px;
+    height: 50px;
+    max-width: 100%;
+    text-decoration: none;
+}
+
+.linkbutton span {
+    flex-grow: 1;
+    text-align: center;
 }
 
 input {
@@ -71,12 +86,12 @@ input {
     width: 50px;
 }
 
-.container{
+.container {
     border: 3px solid var(--accent-color);
     max-width: 30em;
     margin: auto;
 }
 
-a{
+a {
     color: var(--text-color);
 }
