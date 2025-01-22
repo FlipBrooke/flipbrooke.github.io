@@ -55,7 +55,7 @@ button {
     color: var(--light-text-color)
 }
 
-.button {
+.linkbutton {
     padding: 10px;
     border-radius: 10px;
     border: none;
