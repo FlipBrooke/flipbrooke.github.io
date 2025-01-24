@@ -5,63 +5,62 @@
     <title>flipbrooke.github.io</title>
 
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-    <main>
-        <h1>FlipBrooke.github.io</h1>
 
+    <ul class="topnav">
+        <li>
+            <a href="#index">
+                Home
+            </a>    
+        </li>
+        <li>
+            <a href="#faq">
+                FAQ
+            </a>
+        </li>
+        <li>
+            <a href="#games">
+                Games
+            </a>
+        </li>
+        <li>
+            <a href="#games">
+                Card
+            </a>
+        </li>
+        <li style="float:right;">
+            <span class="material-symbols-outlined" style="font-size: 40px; padding: 10% 0;">
+                settings
+            </span>
+        </li>
+
+    </ul>
+
+    <main>
         <img src="/Images/profile.jpg">
 
-        <h2>Welcome to FlipBrooke.github.io!</h2>   
-        <p style="text-align: center">
-            This site is currently: <span style="color: red"> In development</span>
-        </p>
+        <h2>Welcome to FlipBrooke.github.io!</h2>
         <p>
             I'm Brooke, a creator of things on the internet.
-            This is my website! It's homemade, <a target="_blank" href="https://github.com/FlipBrooke/flipbrooke.github.io">open source</a>, and is hosted on <a
+            This is my website! It's homemade, <a target="_blank"
+                href="https://github.com/FlipBrooke/flipbrooke.github.io">open source</a>, and hosted on <a
                 href="https://pages.github.com/" target="_blank"> GitHub Pages.</a>
 
         </p>
         <p>
-            Some people don't realize my name's a pun on <a target="_blank" href="https://en.wikipedia.org/wiki/Flip_book">"flip
+            Some people don't realize my name's a pun on <a target="_blank"
+                href="https://en.wikipedia.org/wiki/Flip_book">"flip
                 book"</a>, The most perfect animation technique ever made!
         </p>
 
-        <div class="container">
-            <p style="text-align: center;padding:10px 10%">I'm currently living in: The United States 🇺🇸</p>
-            <p style="text-align: center;padding:10px 10%">My time is currently <span id="myTime"></span></p>
-
-            <script>
-                const timeElement = document.getElementById('myTime');
-                const toggleButton = document.getElementById('toggleTimeFormat');
-                let is24Hour = false;
-
-                function updateTime() {
-                    timeElement.textContent = new Intl.DateTimeFormat('en-US', {
-                        timeZone: 'America/Denver',
-                        timeStyle: 'medium',
-                        hour12: !is24Hour
-                    }).format(new Date());
-                }
-
-                setInterval(updateTime, 50);
-                updateTime();
-
-                function toggleTimeFormat() {
-                    is24Hour = !is24Hour;
-                    updateTime();
-                    if (is24Hour) {
-                        document.getElementById("toggleTimeFormat").innerHTML = "Use 24-hour time";
-                    } else {
-                        document.getElementById("toggleTimeFormat").innerHTML = "Use 12-hour time";
-                    }
-                }
-            </script>
-
-            <button id="toggleTimeFormat" onclick="toggleTimeFormat()">Use 24-hour time</button>
-        </div>
         <h2>Projects</h2>
         <h3>Mods</h3>
         <h3>Art</h3>
@@ -82,7 +81,8 @@
 
         <h2>Check out my work at...</h2>
         <!-- Curseforge, Github, Youtube -->
-        <a class="linkbutton" style="background-color:#e62e2e" href="https://www.youtube.com/channel/UCHMnX2Se1gL5Nwc26NW7FUg" target="_blank">
+        <a class="linkbutton" style="background-color:#e62e2e"
+            href="https://www.youtube.com/channel/UCHMnX2Se1gL5Nwc26NW7FUg" target="_blank">
             <img src="/Images/yt_icon_mono_dark.png" class="logo">
             <span><b>YouTube</b></span>
         </a>
@@ -93,7 +93,7 @@
         </a>
 
         <a class="linkbutton" style="background-color:#202020">
-            <img src="" class="logo">
+            <img src="/Images/profile.jpg" class="logo">
             <span><b>Curse<span style="color: #f87346">Forge</span></b></span>
         </a>
 

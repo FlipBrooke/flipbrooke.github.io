@@ -9,8 +9,28 @@
     --text-color: black;
     --font-size-base: 16px;
     --line-height: 1.5;
-    --font-family: sans-serif;
+    --font-family: "Source Code Pro", serif;
     --light-text-color: white;
+}
+
+.topnav {
+    background-color: var(--accent-color);
+    overflow: hidden;   
+    list-style-type: none;
+    margin-bottom: 20px;
+    padding: 0px auto;
+}
+.topnav li {
+    float:left;
+}
+
+.topnav li a{
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
 }
 
 body {
