@@ -7,17 +7,18 @@
 :root {
     --accent-color: #95D2B3;
     --text-color: #F1F8E8;
+    --opposite-text-color: black;
     --font-size-base: 16px;
     --line-height: 1.5;
     --font-family: "Inter", serif;
-    --light-text-color: white;
+    --background-color: black;
     --image-size: 200px;
 }
 
 .topnav {
     position: fixed;
     background-color: var(--accent-color);
-    overflow: scroll;   
+    overflow: hidden;   
     list-style-type: none;
     margin-bottom: 100px;
     height: 50px;
@@ -35,7 +36,7 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    color: black;
+    color: var(--opposite-text-color);
 }
 
 body {
@@ -44,7 +45,7 @@ body {
     font-size: var(--font-size-base);   
     line-height: var(--line-height);
     color: var(--text-color);
-    background-color: black;
+    background-color: var(--background-color);
     line-height: var(--line-height);
     color: var(--text-color);
 }
@@ -138,7 +139,7 @@ a {
 .material-symbols-outlined{
     font-size: 40px  !important; 
     padding: 5px 10px;
-    color:black;
+    color: var(--opposite-text-color);
     font-variation-settings: 'FILL' 1;
     user-select: none;
 }
@@ -158,6 +159,7 @@ a {
     width: 0;
     position: fixed;
     overflow-x: hidden;
+    overflow-y:scroll
     background-color: rgba(32, 33, 36,.95);
     top:50px;
     z-index: 1;
@@ -230,7 +232,14 @@ border-radius: 10px;
 }
 
 .card h1{
-    color: black;
+    color: var(--opposite-text-color);
     font-size: 30pt;
     margin: auto;
+}
+
+.cardimg{
+    border-radius: 100%;
+    width: 100px;
+    height: auto;
+    margin: 1em auto;
 }
