@@ -11,27 +11,28 @@
     --font-size-base: 16px;
     --line-height: 1.5;
     --font-family: "Inter", serif;
-    --background-color: black;
+    --background-color: #202124;
+    --background-secondary: 18,18,18;
     --image-size: 200px;
 }
 
 .topnav {
     position: fixed;
     background-color: var(--accent-color);
-    overflow: hidden;   
+    overflow: hidden;
     list-style-type: none;
     margin-bottom: 100px;
     height: 50px;
     width: 100%;
-    top:0;
+    top: 0;
 }
 
 .topnav li {
-    float:left;
+    float: left;
 
 }
 
-.topnav li a{
+.topnav li a {
     display: inline-block;
     text-align: center;
     padding: 14px 16px;
@@ -42,7 +43,7 @@
 body {
     text-align: center;
     font-family: var(--font-family);
-    font-size: var(--font-size-base);   
+    font-size: var(--font-size-base);
     line-height: var(--line-height);
     color: var(--text-color);
     background-color: var(--background-color);
@@ -50,11 +51,13 @@ body {
     color: var(--text-color);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     margin: 1 rem;
 }
 
-h1{
+h1 {
     color: var(--accent-color);
     font-weight: bolder;
     font-size: calc(var(--font-size-base) * 5);
@@ -82,7 +85,7 @@ img {
     margin-right: auto;
     width: var(--image-size);
     height: auto;
-    border-radius: 50px;
+    border-radius: 25%;
 }
 
 button {
@@ -109,7 +112,7 @@ button {
     text-decoration: none;
 }
 
-.linkbutton img{
+.linkbutton img {
     margin-left: 0;
 }
 
@@ -136,68 +139,68 @@ a {
     text-decoration: none;
 }
 
-.material-symbols-outlined{
-    font-size: 40px  !important; 
+.material-symbols-outlined {
+    font-size: 40px !important;
     padding: 5px 10px;
     color: var(--opposite-text-color);
     font-variation-settings: 'FILL' 1;
     user-select: none;
 }
 
-.FAQ p{
-    margin: 0 15%;  
+.FAQ p {
+    margin: 0 15%;
 }
 
-.FAQ h2{
+.FAQ h2 {
     margin-bottom: 5px;
     margin-top: 40px;
     color: var(--accent-color);
 }
 
-.sidenav{
+.sidenav {
     height: 100%;
     width: 0;
     position: fixed;
     overflow-x: hidden;
-    overflow-y:scroll
-    background-color: rgba(32, 33, 36,.95);
-    top:50px;
+    overflow-y: scroll;
+    background-color: rgba(var(--background-secondary), 0.95);
+    top: 50px;
     z-index: 1;
 }
 
-.sidenav a{
+.sidenav a {
     display: block;
     padding: 10px;
     color: var(var(--accent-color));
-}   
+}
 
-.imageDesc{
+.imageDesc {
     margin: auto;
-    border: 1px solid rgba(0,0,0,0);
-    width:var(--image-size);
+    border: 1px solid rgba(0, 0, 0, 0);
+    width: var(--image-size);
     border-radius: 0 0 50px 50px;
-    background-color: rgba(255,255,255,.50);
+    background-color: rgba(255, 255, 255, .50);
     display: none;
 }
 
 .imagewithdesc:hover .imageDesc {
     display: block;
-  }
+}
 
-.imageDesc p{
+.imageDesc p {
     text-align: center;
     padding: 0;
-    margin:0;
+    margin: 0;
     color: black;
-    font-size:8pt;
-    margin:0 10px 10px;
+    font-size: 8pt;
+    margin: 0 10px 10px;
     font-weight: bolder;
 }
 
-.imageDesc a{
-    padding:0;
-    margin:0;
-    color:black;
+.imageDesc a {
+    padding: 0;
+    margin: 0;
+    color: black;
 }
 
 .imagewithdesc {
@@ -207,39 +210,12 @@ a {
     width: var(--image-size);
 }
 
-.element1, .element2 {
+.element1,
+.element2 {
     position: absolute;
     bottom: 0;
 }
 
-.accentcolor{
+.accentcolor {
     color: var(--accent-color);
-}
-
-.card{
-border: 2px solid var(--accent-color);
-margin: auto;
-padding: auto;
-max-width: 600px;
-min-height: 425px;
-border-radius: 10px;
-}
-
-.cardbar{
-    background-color: var(--accent-color);
-    width: auto;
-    border-radius: 6px 6px 0 0 ;
-}
-
-.card h1{
-    color: var(--opposite-text-color);
-    font-size: 30pt;
-    margin: auto;
-}
-
-.cardimg{
-    border-radius: 100%;
-    width: 100px;
-    height: auto;
-    margin: 1em auto;
 }
