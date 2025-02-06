@@ -95,6 +95,7 @@ button {
     background-color: var(--accent-color);
     margin: 10px;
     color: var(--light-text-color);
+    margin-top: 10px;
 }
 
 .linkbutton {
@@ -110,6 +111,11 @@ button {
     height: 50px;
     max-width: 100%;
     text-decoration: none;
+}
+
+.linkbutton:hover{
+    transform: scale(1.1);
+    filter: brightness(1.1);
 }
 
 .linkbutton img {
@@ -140,11 +146,15 @@ a {
 }
 
 .material-symbols-outlined {
-    font-size: 40px !important;
+    font-size: 40px;
     padding: 5px 10px;
     color: var(--opposite-text-color);
     font-variation-settings: 'FILL' 1;
     user-select: none;
+}
+
+.topnav .material-symbols-outlined{
+    font-size: 40px;
 }
 
 .FAQ p {
@@ -166,10 +176,11 @@ a {
     background-color: rgba(var(--background-secondary), 0.95);
     top: 50px;
     z-index: 1;
+    transition: 0.5s;
 }
 
 .sidenav a {
-    display: block;
+    display: flex;
     padding: 10px;
     color: var(var(--accent-color));
 }
@@ -218,4 +229,110 @@ a {
 
 .accentcolor {
     color: var(--accent-color);
+}
+
+.buttontext{
+font-size: 12pt;
+font-weight: bold;
+color: var(--opposite-text-color);
+}
+
+footer{
+    position: fixed;
+    bottom:0;
+    width: 100%;
+}
+
+footer p{
+    text-align: center;
+}
+
+.text-color{
+    color: var(--text-color);
+}
+
+.games h1{
+}
+
+.games h2{
+    font-weight: normal;
+}
+
+a.genre {
+display: inline-block;
+border: 2px solid black;
+border-radius: 500px;
+padding: 2px 5px;
+font-size: 8pt;
+background-color: var(--genre-color);
+border-color: var(--genre-color);
+font-weight: bolder;
+text-align: center;
+vertical-align:middle;
+margin-bottom: 10px;
+}
+
+a.genre span{
+    color: var(--text-color);
+    font-size: 10pt;
+    padding: 0;
+    text-align: center;
+    vertical-align:middle;
+    margin-top: -4px;
+}
+
+a.genre.roleplaying{
+    background-color: hsl(24,11%,54%);
+    border-color: var(--text-color);
+}
+
+a.genre.sandbox{
+    background-color: green;
+    border-color: var(--text-color);
+}
+
+a.genre.survival{
+    background-color: red;
+    border-color: var(--text-color);
+}
+
+a.genre.horror{
+    background-color: indigo;
+    border-color: var(--text-color);
+}
+
+
+a.genre.platformer{
+    background-color: ;
+    border-color: var(--text-color);
+}
+
+a.genre.mini{
+    background-color: red;
+    border-color: var(--text-color);
+}
+
+a.genre.mix{
+    background-color: red;
+    border-color: var(--text-color);
+}
+
+a.genre.roguelike{
+    background-color: darkturquoise;
+    border-color: var(--text-color);
+}
+
+a.genre.simulation{
+    background-color: red;
+    border-color: var(--text-color);
+}
+
+a.genre.party{
+    background-color: red;
+    border-color: var(--text-color);
+}
+
+a.genre.wargame{
+    background-color: red;
+    border-color: var(--text-color);
 }
