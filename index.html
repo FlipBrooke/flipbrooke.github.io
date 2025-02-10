@@ -19,6 +19,11 @@
 <body>
 
     <ul class="topnav">
+        <li style="float:left">
+            <span onclick="sidenavOpen()" class="material-symbols-outlined">
+                menu
+            </span>
+        </li>
         <li>
             <a href="index.html">
                 Home
@@ -47,9 +52,41 @@
 
     </ul>
 
+    <div id="sidenav" class="sidenav">
+        <a onclick="sidenavClose()" class="closebtn">
+            <span class="material-symbols-outlined" style="float:left; margin:0; margin-bottom: 100%;">
+                close
+            </span>
+        </a>
+        <a href="#whyimflipbrooke">Why is your name FlipBrooke</a>
+        <a href="#workIdo">What work do you do?</a>
+        <a href="#continuework">Will you continue to work on this thing</a>
+        <a href="#contact">How can I contact you?</a>
+        <a href="#pfp">Who made your profile picture?</a>
+    </div>
+
+
+    <script>
+        function sidenavOpen() {
+            document.getElementById("sidenav").style.width = "400px"
+        }
+
+        function sidenavClose() {
+            document.getElementById("sidenav").style.width = "0";
+        } 
+    </script>
+    
+
     <main>
+        <div style="border: yellow solid 5px; margin: 90px 40% 20px 40%; padding: 20px;">
+            <h2 style="color: yellow;">CURRENTLY UNDER DEVELOPMENT</h2>
+            <span class="material-symbols-outlined" style="color: yellow; font-size: 48px;">construction</span>
+            <h2 style="color: yellow;">CONTINUE AT YOUR OWN RISK</h2>
+            </div>
+
         <h2 style="margin-top: 70px;">Welcome to</h2>
         <h1 style="font-size: 50px;">FlipBrooke.github.io!</h1>
+
         <img src="/Images/profile.jpg">
 
         <p style="text-indent: 3em;">
@@ -96,11 +133,7 @@
 
     </main>
 
-    <footer>
-        <p style="text-align: center">Copyright © 2024-
-            <script>document.write(new Date().getFullYear())</script> FlipBrooke
-        </p>
-    </footer>
+    <div style="height: 180px;"></div>
 </body>
 
 </html>

@@ -5,7 +5,7 @@
 }
 
 :root {
-    --accent-color: #95D2B3;
+    --accent-color: #89e0cd;
     --text-color: #F1F8E8;
     --opposite-text-color: black;
     --font-size-base: 16px;
@@ -168,21 +168,43 @@ a {
 }
 
 .sidenav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     height: 100%;
     width: 0;
     position: fixed;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    background-color: rgba(var(--background-secondary), 0.95);
-    top: 50px;
     z-index: 1;
+    top: 50px;
+    left: 0;
+    background-color: rgba(var(--background-secondary), 0.95);
+    overflow-x: hidden;
     transition: 0.5s;
 }
 
 .sidenav a {
-    display: flex;
+    display: block;
     padding: 10px;
-    color: var(var(--accent-color));
+    color: var(--text-color);
+    overflow-x: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+    margin-left: 10%;
+}
+
+
+.sidenav .closebtn{
+    position: absolute;
+  top: 0px;
+  right: 0px;
+  margin: 0;
+  display: block;
+  color: var(--text-color);
+}
+
+.sidenav .closebtn .material-symbols-outlined{
+  color: var(--text-color);
 }
 
 .imageDesc {
