@@ -45,9 +45,9 @@
             </span>
         </li>
         <li style="float:right;">
-            <span class="material-symbols-outlined">
+            <span class="material-symbols-outlined" onclick="toggleDarkMode()">
                 dark_mode
-                </span>
+            </span>
         </li>
 
     </ul>
@@ -58,11 +58,9 @@
                 close
             </span>
         </a>
-        <a href="#whyimflipbrooke">Why is your name FlipBrooke</a>
-        <a href="#workIdo">What work do you do?</a>
-        <a href="#continuework">Will you continue to work on this thing</a>
-        <a href="#contact">How can I contact you?</a>
-        <a href="#pfp">Who made your profile picture?</a>
+        <a href="#welcome">Welcome to FlipBrooke.github.io</a>
+        <a href="#reachme">How to reach me</a>
+        <a href="#mywork">Check out my work</a>
     </div>
 
 
@@ -76,15 +74,18 @@
         } 
     </script>
     
+    <script>
+        document.body.classList.toggle("lightmode", localStorage.getItem("theme") === "light");
+
+        function toggleDarkMode() {
+            const isLight = document.body.classList.toggle("lightmode");
+            localStorage.setItem("theme", isLight ? "light" : "dark");
+        }
+    </script>
 
     <main>
-        <div style="border: yellow solid 5px; margin: 90px 40% 20px 40%; padding: 20px;">
-            <h2 style="color: yellow;">CURRENTLY UNDER DEVELOPMENT</h2>
-            <span class="material-symbols-outlined" style="color: yellow; font-size: 48px;">construction</span>
-            <h2 style="color: yellow;">CONTINUE AT YOUR OWN RISK</h2>
-            </div>
 
-        <h2 style="margin-top: 70px;">Welcome to</h2>
+        <h2 style="margin-top: 70px;" id="welcome">Welcome to</h2>
         <h1 style="font-size: 50px;">FlipBrooke.github.io!</h1>
 
         <img src="/Images/profile.jpg">
@@ -102,38 +103,36 @@
                 book"</a>, The most perfect animation technique ever made!
         </p>
 
-        <h2>You can reach me via...</h2>
+        <h2 id="reachme">You can reach me via...</h2>
         <a class="linkbutton" style="background-color:#5865f2" href="" target="_blank">
             <img src="/Images/profile.jpg" class="logo">
-            <span><b>Discord</b></span>
+            <span class="logo"><b>Discord</b></span>
         </a>
 
         <a class="linkbutton" style="background-color:#e85543" href="" target="_blank">
             <img src="/Images/email.png" class="logo";>
-            <span><b>Email</b></span>
+            <span class="logo"><b>Email</b></span>
         </a>
 
-        <h2>Check out my work at...</h2>
-        <!-- Curseforge, Github, Youtube -->
+        <h2 id="mywork">Check out my work at...</h2>
+
         <a class="linkbutton" style="background-color:#e62e2e"
             href="https://www.youtube.com/channel/UCHMnX2Se1gL5Nwc26NW7FUg" target="_blank">
             <img src="/Images/yt_icon_mono_dark.png" class="logo">
-            <span><b>YouTube</b></span>
+            <span class="logo"><b>YouTube</b></span>
         </a>
 
         <a class="linkbutton" style="background-color:#171515" href="https://github.com/FlipBrooke" target="_blank">
             <img src="/Images/github-mark-white.png" class="logo">
-            <span><b>GitHub</b></span>
+            <span class="logo"><b>GitHub</b></span>
         </a>
 
         <a class="linkbutton" style="background-color:#202020" href="" target="_blank">
             <img src="/Images/profile.jpg" class="logo">
-            <span><b>Curse<span style="color: #f87346">Forge</span></b></span>
+            <span class="logo"><b>Curse<span style="color: #f87346">Forge</span></b></span>
         </a>
 
     </main>
-
-    <div style="height: 180px;"></div>
 </body>
 
 </html>

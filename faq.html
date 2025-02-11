@@ -17,9 +17,6 @@
         rel="stylesheet">
 </head>
 
-
-
-
 <body>
     <ul class="topnav">
         <li style="float:left">
@@ -48,7 +45,7 @@
             </span>
         </li>
         <li style="float:right;">
-            <span class="material-symbols-outlined">
+            <span class="material-symbols-outlined" onclick="toggleDarkMode()">
                 dark_mode
             </span>
         </li>
@@ -56,8 +53,8 @@
     </ul>
 
     <div id="sidenav" class="sidenav">
-        <a onclick="sidenavClose()">
-            <span class="text-colormaterial-symbols-outlined" style="float:left; margin:0; margin-bottom: 100%;">
+        <a onclick="sidenavClose()" class="closebtn">
+            <span class="material-symbols-outlined" style="float:left; margin:0; margin-bottom: 100%;">
                 close
             </span>
         </a>
@@ -66,6 +63,7 @@
         <a href="#continuework">Will you continue to work on this thing</a>
         <a href="#contact">How can I contact you?</a>
         <a href="#pfp">Who made your profile picture?</a>
+        <a href="#sticky" class="sublink">Sticky (Yellow Dog)</a>
     </div>
 
 
@@ -79,27 +77,47 @@
         } 
     </script>
 
+    <script>
+        document.body.classList.toggle("lightmode", localStorage.getItem("theme") === "light");
+
+        function toggleDarkMode() {
+            const isLight = document.body.classList.toggle("lightmode");
+            localStorage.setItem("theme", isLight ? "light" : "dark");
+        }
+    </script>
 
     <span class="FAQ">
         <h1 style="margin-top: 70px;">FAQ</h1>
 
-        <h2 style="margin-top: 0;"><a></a>Why is your name FlipBrooke?</h2>
-        <p>Brooke is my first name, and a flip book is an animation medium I like. Mash them together and you get FlipBrooke.</p>
+        <h2 id="whyimflipbrooke" style="margin-top: 0;">Why is your name FlipBrooke?</h2>
+        <p>Brooke is my first name, and a flip book is an animation medium I like. Mash them together and you get
+            FlipBrooke. It's also partially a reference to <a target="_blank"
+                href="https://en.wikipedia.org/wiki/Flipnote_Studio">
+                Flipnote Studio</a>, an animation software from<a target="_blank"
+                href="https://en.wikipedia.org/wiki/Nintendo_DS">the DS family of handhelds</a> that continues to be
+            popular <span id="flipnoteYears"></span> years after its release</p>
 
-        <h2>What work do you do?</h2>
+        <script>
+            const today = new Date();
+            const flipnoteYears = today.getFullYear() - 2008 - (today < new Date(today.getFullYear(), 11, 24) ? 1 : 0);
+            document.getElementById("flipnoteYears").textContent = flipnoteYears;
+        </script>
+
+        <h2 id="workIdo">What work do you do?</h2>
         <p> I currently do traditional art and programming. I also research linguistics as a hobby</p>
 
-        <h2>Will you continue to work on this thing?</h2>
+        <h2 id="continuework">Will you continue to work on this thing?</h2>
         <p>I mostly just work on things when I find the time, but there's no harm in asking if it's not marked as
-            <a>discontinued.</a>  
+            <a>discontinued.</a>
         </p>
 
-        <h2>How can I contact you?</h2>
-        <p> I respond the most quick to my <a>Discord</a>, but I also can be emailed at <a>email@domain.com</a></p>
+        <h2 id="contact">How can I contact you?</h2>
+        <p> I respond the most quick to my <a target="_blank" href="">Discord</a>, but I also can be emailed at <a
+                target="_blank" href="">email@domain.com</a></p>
 
-        <h2> Who made your profile picture?</h2>
+        <h2 id="pfp"> Who made your profile picture?</h2>
         <p>The profile pictures I use are listed here, alongside their artists</p>
-        <h3 class="accentcolor">Sticky</h3>
+        <h3 id="sticky" class="accentcolor">Sticky</h3>
         <h4>From "Bee and Puppycat"</h4>
         <div class="imagewithdesc">
             <div class="element1">
@@ -111,34 +129,30 @@
             <div class="element2">
                 <div class="imageDesc">
                     <p>This image is owned by Frederator Studios. The use of this image is to identify their ownership,
-                        and falls under <a href="https://www.copyright.gov/fair-use/index.html">fair use.</a></p>
+                        and falls under <a target="_blank" href="https://www.copyright.gov/fair-use/index.html">fair
+                            use.</a></p>
                 </div>
 
             </div>
         </div>
 
-
-
-        <p>This is Sticky, a minor character from the show <a href="https://en.wikipedia.org/wiki/Bee_and_PuppyCat">Bee
+        <p>This is Sticky, a minor character from the show <a target="_blank"
+                href="https://en.wikipedia.org/wiki/Bee_and_PuppyCat">Bee
                 and Puppycat</a>, created by the talented people at
-            <a href="https://en.wikipedia.org/wiki/Frederator_Studios">Frederator</a>. She's
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Frederator_Studios">Frederator</a>. She's
             a yellow dog, and the pet of another character in the show.
         </p>
-        <p>You can watch <a href="https://www.youtube.com/watch?v=dop4MTlf_zc">the first season of Bee and Puppycat for
+        <p>You can watch <a target="_blank" href="https://www.youtube.com/watch?v=dop4MTlf_zc">the first season of Bee
+                and Puppycat for
                 free </a> on
-            <a href="https://www.youtube.com/@CartoonHangover"> The youtube channel CartoonHangover</a>, and season two
-            as episodes three though sixteen of <a href="https://www.netflix.com/title/81245457">"Bee and Puppycat: Lazy
+            <a target="_blank" href="https://www.youtube.com/@CartoonHangover"> The youtube channel CartoonHangover</a>,
+            and season two
+            as episodes three though sixteen of <a target="_blank" href="https://www.netflix.com/title/81245457">"Bee
+                and Puppycat: Lazy
                 in Space"</a>
-            on <a href="https://www.netflix.com/">Netflix</a>
+            on <a target="_blank" href="https://www.netflix.com/">Netflix</a>
         </p>
     </span>
-
-    <footer>
-        <p style="text-align: center">Copyright © 2024-
-            <script>document.write(new Date().getFullYear())</script> FlipBrooke
-        </p>
-    </footer>
-
 </body>
 
 </html>

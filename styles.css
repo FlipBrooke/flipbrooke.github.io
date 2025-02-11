@@ -16,6 +16,13 @@
     --image-size: 200px;
 }
 
+.lightmode{
+    --text-color: black;
+    --opposite-text-color:white;
+    --background-color: white; 
+    --accent-color: #28a9b5;
+}
+
 .topnav {
     position: fixed;
     background-color: var(--accent-color);
@@ -38,6 +45,10 @@
     padding: 14px 16px;
     text-decoration: none;
     color: var(--opposite-text-color);
+}
+
+.topnav li a:hover {
+    font-weight: bold;
 }
 
 body {
@@ -77,6 +88,7 @@ p {
     width: 30px;
     height: auto;
     margin-left: 10px;
+    color: white;
 }
 
 img {
@@ -181,6 +193,7 @@ a {
     background-color: rgba(var(--background-secondary), 0.95);
     overflow-x: hidden;
     transition: 0.5s;
+    padding-top: 30px;
 }
 
 .sidenav a {
@@ -193,6 +206,10 @@ a {
     margin-left: 10%;
 }
 
+.sublink{
+    text-indent: 30px;
+    font-weight: lighter;
+}
 
 .sidenav .closebtn{
     position: absolute;
@@ -273,11 +290,20 @@ footer p{
     color: var(--text-color);
 }
 
-.games h1{
+h1, h2, h3, h4{
+    scroll-margin-top: 70px;
 }
 
 .games h2{
-    font-weight: normal;
+    font-weight: bold;
+    color: var(--accent-color);
+    font-size: 30pt;
+}
+
+.games h4{
+    font-weight: bold;
+    margin: 10px;
+    font-size: 20pt;
 }
 
 a.genre {

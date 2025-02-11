@@ -35,7 +35,7 @@
             </a>
         </li>
         <li>
-            <a href="games.html">
+            <a href="media.html">
                 Media
             </a>
         </li>
@@ -45,7 +45,7 @@
             </span>
         </li>
         <li style="float:right;">
-            <span class="material-symbols-outlined">
+            <span class="material-symbols-outlined" onclick="toggleDarkMode()">
                 dark_mode
             </span>
         </li>
@@ -58,9 +58,20 @@
                 close
             </span>
         </a>
-        <a href="#videogames">Video Games</a>
-
-        <a href="#videogames">Tabletop Games</a>
+        <a href="#Videogames">Video Games</a>
+        <a href="#NewVegas" class="sublink">Fallout New Vegas</a>
+        <a href="#Minecraft" class="sublink">Minecraft</a>
+        <a href="#Baro" class="sublink">Barotrauma</a>
+        <a href="#DST" class="sublink">Don't Starve</a>
+        <a href="#Stardew" class="sublink">Stardew Valley</a>
+        <a href="#Rainworld" class="sublink">Rainworld</a>
+        <a href="#Zomboid" class="sublink">Project Zomboid</a>
+        <a href="#Spelunky" class="sublink">Spelunky 2</a>
+        <a href="#GettingOverIt" class="sublink">Getting Over It</a>
+        <a href="#Jackbox" class="sublink">The Jackbox Party Packs</a>
+        <a href="#Tabletop">Tabletop Games</a>
+        <a href="#Pathfinder" class="sublink">Pathfinder 2e</a>
+        <a href="#40k" class="sublink">Warhammer 40k</a>
 
     </div>
 
@@ -75,15 +86,23 @@
         } 
     </script>
 
+<script>
+    document.body.classList.toggle("lightmode", localStorage.getItem("theme") === "light");
 
+    function toggleDarkMode() {
+        const isLight = document.body.classList.toggle("lightmode");
+        localStorage.setItem("theme", isLight ? "light" : "dark");
+    }
+</script>
 
     <span class="games">
 
         <h1 style="margin-top: 70px;">Media</h1>
+        <p>This is a large list of media I would recommend! Use the menu button in the top right corner to open the navigation menu.</p>
 
-        <h2>Video Games</h2>
+        <h2 id="Videogames">Video Games</h2>
 
-        <h4>Fallout New Vegas</h4>
+        <h4 id="NewVegas">Fallout New Vegas</h4>
         <a class="genre roleplaying">
             <span class="material-symbols-outlined">
                 auto_stories
@@ -93,7 +112,7 @@
         <img src="Images/profile.jpg">
         <p></p>
 
-        <h4>Minecraft</h4>
+        <h4 id="Minecraft">Minecraft</h4>
 
         <a class="genre sandbox">
             <span class="material-symbols-outlined">
@@ -105,9 +124,9 @@
         <a class="genre survival">
             <span class="material-symbols-outlined"> Camping </span> Survival</a>
         <img src="Images/profile.jpg">
-        <p></p>
+        <p>Minecraft</p>
 
-        <h4>Barotrauma</h4>
+        <h4 id="Baro">Barotrauma</h4>
         <a class="genre survival"><span class="material-symbols-outlined"> Camping </span> Survival</a>
         <a class="genre horror">
             <span class="material-symbols-outlined">Skull</span>
@@ -122,7 +141,7 @@
         <img src="Images/profile.jpg">
         <p></p>
 
-        <h4>Don't Starve</h4>
+        <h4 id="DST">Don't Starve</h4>
         <a class="genre survival"><span class="material-symbols-outlined"> Camping </span> Survival</a>
         <a class="genre roguelike">
             <span class="material-symbols-outlined"> all_inclusive </span>
@@ -131,7 +150,7 @@
         <img src="Images/profile.jpg">
         <p></p>
 
-        <h4>Stardew Valley</h4>
+        <h4 id="Stardew">Stardew Valley</h4>
         <a class="genre simulation">
             <span class="material-symbols-outlined"> agriculture </span>
             Simulation</a>
@@ -144,7 +163,7 @@
         <img src="Images/profile.jpg">
         <p></p>
 
-        <h4>Rainworld</h4>
+        <h4 id="Rainworld">Rainworld</h4>
         <a class="genre survival"><span class="material-symbols-outlined"> Camping </span> Survival</a>
         <a class="genre platformer">
 
@@ -153,7 +172,7 @@ Platformer</a>
         <img src="Images/profile.jpg">
         <p></p>
 
-        <h4>Project Zomboid</h4>
+        <h4 id="Zomboid">Project Zomboid</h4>
         <a class="genre survival"><span class="material-symbols-outlined"> Camping </span> Survival</a>
         <a class="genre roleplaying">
             <span class="material-symbols-outlined">
@@ -164,7 +183,7 @@ Platformer</a>
         <img src="Images/profile.jpg">
         <p></p>
 
-        <h4>Spelunky 2</h4>
+        <h4 id="Spelunky">Spelunky 2</h4>
         <a class="genre platformer">
 
   <span class="material-symbols-outlined"> sprint</span>
@@ -176,7 +195,7 @@ Platformer</a>
         <img src="Images/profile.jpg">
         <p></p>
 
-        <h4>Getting Over It</h4>
+        <h4 id="GettingOverIt">Getting Over It</h4>
         <a class="genre platformer">
 
   <span class="material-symbols-outlined"> sprint</span>
@@ -184,7 +203,7 @@ Platformer</a>
         <img src="Images/profile.jpg">
         <p></p>
 
-        <h4>The Jackbox Party Packs</h4>
+        <h4 id="Jackbox">The Jackbox Party Packs</h4>
         <a class="genre party">
             <span class="material-symbols-outlined"> Celebration </span>
             Party
@@ -196,9 +215,9 @@ Platformer</a>
         <img src="Images/profile.jpg">
         <p></p>
 
-        <h2>Tabletop Games</h2>
+        <h2 id="Tabletop">Tabletop Games</h2>
 
-        <h4>Pathfinder 2e</h4>
+        <h4 id="Pathfinder">Pathfinder 2e</h4>
         <a class="genre roleplaying">
             <span class="material-symbols-outlined">
             auto_stories
@@ -210,7 +229,7 @@ Platformer</a>
 
         </p>
 
-        <h4>Warhammer 40k</h4>
+        <h4 id="40k">Warhammer 40k</h4>
         <a class="genre mini">
             <span class="material-symbols-outlined"> brush </span>
             Miniature

@@ -50,7 +50,7 @@
             </span>
         </li>
         <li style="float:right;">
-            <span class="material-symbols-outlined">
+            <span class="material-symbols-outlined" onclick="toggleDarkMode()">
                 dark_mode
             </span>
         </li>
@@ -63,11 +63,7 @@
                 close
             </span>
         </a>
-        <a href="#whyimflipbrooke">Why is your name FlipBrooke</a>
-        <a href="#workIdo">What work do you do?</a>
-        <a href="#continuework">Will you continue to work on this thing</a>
-        <a href="#contact">How can I contact you?</a>
-        <a href="#pfp">Who made your profile picture?</a>
+        <a href="#Error 404">Why is your name FlipBrooke</a>
     </div>
 
 
@@ -81,7 +77,14 @@
         } 
     </script>
 
+<script>
+    document.body.classList.toggle("lightmode", localStorage.getItem("theme") === "light");
 
+    function toggleDarkMode() {
+        const isLight = document.body.classList.toggle("lightmode");
+        localStorage.setItem("theme", isLight ? "light" : "dark");
+    }
+</script>
 
     <h1 style="margin-top: 70px">
         404
