@@ -24,9 +24,15 @@
                 menu
             </span>
         </li>
+        <div class="pageShortcuts">
         <li>
             <a href="index.html">
                 Home
+            </a>
+        </li>
+        <li>
+            <a href="aboutme.html">
+                About Me
             </a>
         </li>
         <li>
@@ -35,18 +41,24 @@
             </a>
         </li>
         <li>
-            <a href="media.html">
+            <a>
                 Media
             </a>
         </li>
+        <li>
+            <a href="legal.html">
+                Legal
+            </a>
+        </li>
+    </div>
         <li style="float:right;">
             <span class="material-symbols-outlined">
                 settings
             </span>
         </li>
         <li style="float:right;">
-            <span class="material-symbols-outlined" onclick="toggleDarkMode()">
-                dark_mode
+            <span class="material-symbols-outlined" onclick="toggleDarkMode()" id="darkModeIcon">
+                light_mode
             </span>
         </li>
 
@@ -64,7 +76,7 @@
         <a href="#Baro" class="sublink">Barotrauma</a>
         <a href="#DST" class="sublink">Don't Starve</a>
         <a href="#Stardew" class="sublink">Stardew Valley</a>
-        <a href="#Rainworld" class="sublink">Rainworld</a>
+        <a href="#Rainworld" class="sublink">Rain World</a>
         <a href="#Zomboid" class="sublink">Project Zomboid</a>
         <a href="#Spelunky" class="sublink">Spelunky 2</a>
         <a href="#GettingOverIt" class="sublink">Getting Over It</a>
@@ -87,11 +99,24 @@
     </script>
 
 <script>
-    document.body.classList.toggle("lightmode", localStorage.getItem("theme") === "light");
+    document.addEventListener("DOMContentLoaded", () => {
+        const darkModeIcon = document.getElementById("darkModeIcon");
+        const isLightMode = localStorage.getItem("theme") === "light";
+
+        document.body.classList.toggle("lightmode", isLightMode);
+        updateDarkModeIcon(darkModeIcon, isLightMode);
+    });
 
     function toggleDarkMode() {
-        const isLight = document.body.classList.toggle("lightmode");
-        localStorage.setItem("theme", isLight ? "light" : "dark");
+        const darkModeIcon = document.getElementById("darkModeIcon");
+        const isLightMode = document.body.classList.toggle("lightmode");
+
+        localStorage.setItem("theme", isLightMode ? "light" : "dark");
+        updateDarkModeIcon(darkModeIcon, isLightMode);
+    }
+
+    function updateDarkModeIcon(icon, isLightMode) {
+        icon.innerText = isLightMode ? 'dark_mode' : 'light_mode';
     }
 </script>
 
@@ -124,7 +149,6 @@
         <a class="genre survival">
             <span class="material-symbols-outlined"> Camping </span> Survival</a>
         <img src="Images/profile.jpg">
-        <p>Minecraft</p>
 
         <h4 id="Baro">Barotrauma</h4>
         <a class="genre survival"><span class="material-symbols-outlined"> Camping </span> Survival</a>
@@ -163,7 +187,7 @@
         <img src="Images/profile.jpg">
         <p></p>
 
-        <h4 id="Rainworld">Rainworld</h4>
+        <h4 id="Rainworld">Rain World</h4>
         <a class="genre survival"><span class="material-symbols-outlined"> Camping </span> Survival</a>
         <a class="genre platformer">
 

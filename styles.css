@@ -11,22 +11,21 @@
     --font-size-base: 16px;
     --line-height: 1.5;
     --font-family: "Inter", serif;
-    --background-color: #202124;
-    --background-secondary: 18,18,18;
+    --background-color: #292c33;
+    --background-secondary: 18, 18, 18;
     --image-size: 200px;
 }
 
-.lightmode{
+.lightmode {
     --text-color: black;
-    --opposite-text-color:white;
-    --background-color: white; 
+    --opposite-text-color: white;
+    --background-color: #f1fbff;
     --accent-color: #28a9b5;
 }
 
 .topnav {
     position: fixed;
     background-color: var(--accent-color);
-    overflow: hidden;
     list-style-type: none;
     margin-bottom: 100px;
     height: 50px;
@@ -36,7 +35,13 @@
 
 .topnav li {
     float: left;
+}
 
+.topnavLinks {
+    display: flexbox;
+}
+
+.topnav li:has(.material-symbols-outlined) {
 }
 
 .topnav li a {
@@ -125,7 +130,7 @@ button {
     text-decoration: none;
 }
 
-.linkbutton:hover{
+.linkbutton:hover {
     transform: scale(1.1);
     filter: brightness(1.1);
 }
@@ -165,7 +170,7 @@ a {
     user-select: none;
 }
 
-.topnav .material-symbols-outlined{
+.topnav .material-symbols-outlined {
     font-size: 40px;
 }
 
@@ -206,22 +211,22 @@ a {
     margin-left: 10%;
 }
 
-.sublink{
+.sublink {
     text-indent: 30px;
     font-weight: lighter;
 }
 
-.sidenav .closebtn{
+.sidenav .closebtn {
     position: absolute;
-  top: 0px;
-  right: 0px;
-  margin: 0;
-  display: block;
-  color: var(--text-color);
+    top: 0px;
+    right: 0px;
+    margin: 0;
+    display: block;
+    color: var(--text-color);
 }
 
-.sidenav .closebtn .material-symbols-outlined{
-  color: var(--text-color);
+.sidenav .closebtn .material-symbols-outlined {
+    color: var(--text-color);
 }
 
 .imageDesc {
@@ -239,7 +244,7 @@ a {
 
 .imageDesc p {
     text-align: center;
-    padding: 0;
+    padding: 2px;
     margin: 0;
     color: black;
     font-size: 8pt;
@@ -270,117 +275,124 @@ a {
     color: var(--accent-color);
 }
 
-.buttontext{
-font-size: 12pt;
-font-weight: bold;
-color: var(--opposite-text-color);
+.buttontext {
+    font-size: 12pt;
+    font-weight: bold;
+    color: var(--opposite-text-color);
 }
 
-footer{
+footer {
     position: fixed;
-    bottom:0;
+    bottom: 0;
     width: 100%;
 }
 
-footer p{
+footer p {
     text-align: center;
 }
 
-.text-color{
+.text-color {
     color: var(--text-color);
 }
 
-h1, h2, h3, h4{
+h1,
+h2,
+h3,
+h4 {
     scroll-margin-top: 70px;
 }
 
-.games h2{
+.games h2 {
     font-weight: bold;
     color: var(--accent-color);
     font-size: 30pt;
 }
 
-.games h4{
+.games h4 {
     font-weight: bold;
     margin: 10px;
     font-size: 20pt;
 }
 
 a.genre {
-display: inline-block;
-border: 2px solid black;
-border-radius: 500px;
-padding: 2px 5px;
-font-size: 8pt;
-background-color: var(--genre-color);
-border-color: var(--genre-color);
-font-weight: bolder;
-text-align: center;
-vertical-align:middle;
-margin-bottom: 10px;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 500px;
+    padding: 2px 5px;
+    font-size: 8pt;
+    background-color: var(--genre-color);
+    border-color: var(--genre-color);
+    font-weight: bolder;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 10px;
 }
 
-a.genre span{
+a.genre span {
     color: var(--text-color);
     font-size: 10pt;
     padding: 0;
     text-align: center;
-    vertical-align:middle;
-    margin-top: -4px;
+    vertical-align: middle;
+    margin-top: -2px;
 }
 
-a.genre.roleplaying{
-    background-color: hsl(24,11%,54%);
+a.genre.roleplaying {
+    background-color: hsl(24, 11%, 54%);
     border-color: var(--text-color);
 }
 
-a.genre.sandbox{
+a.genre.sandbox {
     background-color: green;
     border-color: var(--text-color);
 }
 
-a.genre.survival{
+a.genre.survival {
     background-color: red;
     border-color: var(--text-color);
 }
 
-a.genre.horror{
+a.genre.horror {
     background-color: indigo;
     border-color: var(--text-color);
 }
 
 
-a.genre.platformer{
+a.genre.platformer {
     background-color: ;
     border-color: var(--text-color);
 }
 
-a.genre.mini{
+a.genre.mini {
     background-color: red;
     border-color: var(--text-color);
 }
 
-a.genre.mix{
+a.genre.mix {
     background-color: red;
     border-color: var(--text-color);
 }
 
-a.genre.roguelike{
+a.genre.roguelike {
     background-color: darkturquoise;
     border-color: var(--text-color);
 }
 
-a.genre.simulation{
+a.genre.simulation {
     background-color: red;
     border-color: var(--text-color);
 }
 
-a.genre.party{
+a.genre.party {
     background-color: red;
     border-color: var(--text-color);
 }
 
-a.genre.wargame{
+a.genre.wargame {
     background-color: red;
     border-color: var(--text-color);
+}
+
+.legal h2 {
+    color: var(--accent-color);
 }

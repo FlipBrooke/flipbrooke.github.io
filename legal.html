@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> FlipBrooke.github.io</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,1,0..200&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<body>
+
+    <ul class="topnav">
+        <li style="float:left">
+            <span onclick="sidenavOpen()" class="material-symbols-outlined">
+                menu
+            </span>
+        </li>
+        <li>
+            <a href="index.html">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="aboutme.html">
+                About Me
+            </a>
+        </li>
+        <li>
+            <a href="faq.html">
+                FAQ
+            </a>
+        </li>
+        <li>
+            <a href="media.html">
+                Media
+            </a>
+        </li>
+        <li>
+            <a>
+                Legal
+            </a>
+        </li>
+        <li style="float:right;">
+            <span class="material-symbols-outlined">
+                settings
+            </span>
+        </li>
+        <li style="float:right;">
+            <span class="material-symbols-outlined" onclick="toggleDarkMode()" id="darkModeIcon">
+                light_mode
+            </span>
+        </li>
+
+    </ul>
+
+    <div id="sidenav" class="sidenav">
+        <a onclick="sidenavClose()" class="closebtn">
+            <span class="material-symbols-outlined" style="float:left; margin:0; margin-bottom: 100%;">
+                close
+            </span>
+        </a>
+        <a href="#fairuse">Fair Use Policy</a>
+    </div>
+
+    <script>
+        function sidenavOpen() {
+            document.getElementById("sidenav").style.width = "400px"
+        }
+
+        function sidenavClose() {
+            document.getElementById("sidenav").style.width = "0";
+        } 
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const darkModeIcon = document.getElementById("darkModeIcon");
+            const isLightMode = localStorage.getItem("theme") === "light";
+
+            document.body.classList.toggle("lightmode", isLightMode);
+            updateDarkModeIcon(darkModeIcon, isLightMode);
+        });
+
+        function toggleDarkMode() {
+            const darkModeIcon = document.getElementById("darkModeIcon");
+            const isLightMode = document.body.classList.toggle("lightmode");
+
+            localStorage.setItem("theme", isLightMode ? "light" : "dark");
+            updateDarkModeIcon(darkModeIcon, isLightMode);
+        }
+
+        function updateDarkModeIcon(icon, isLightMode) {
+            icon.innerText = isLightMode ? 'dark_mode' : 'light_mode';
+        }
+    </script>
+
+    <main>
+    <span class="legal">
+        <h1 style="margin-top: 70px;">Legal</h1>
+        <h1 id="fairuse" style="font-size: 40pt;">Fair Use Policy</h1>
+        <p style="text-indent: 10%;"> This website makes limited use of <a href="" target="_blank">copyrighted works</a>
+            without expressed permission from <a href="" target="_blank">the copyright holder</a>. This is done legally
+            though <a href="" target="_blank">fair use</a>. Below is a list of all copyrighted media used, and the
+            reason its usage falls under fair use. If you believe I made a mistake and an element does not fall under
+            fair use, please contact me at <a href="" target="_blank">legal@example.tld</a></p>
+        <h2 id="faq">FAQ Page</h2>
+        <h3 id="sticky">Sticky</h3>
+        <p>Sticky is a minor character from the show <a href="" target="_blank">Bee and Puppycat</a>, created by <a
+                href="" target="_blank">Natasha Allegri</a> and produced by <a href="" target="_blank">Frederator
+                Studios</a>.This image is a single section of a low quality tv show frame, and is used non-commercially
+            to attribute the creators when the image is used elsewhere.</p>
+
+        <h2>Media Page</h2>
+        <p>The recommended media has artwork and images for the purpose of review, which falls under fair use. While gathering
+            these images, I first prioritized official press kits, then my own media, and lastly unofficial press kits.
+            A list of the media and the source I got the image from has been provided</p>
+
+            <h3>Fallout New Vegas</h3>
+            <p></p>
+
+            <h3>Minecraft</h3>
+            <p></p>
+
+            <h3>Barotrauma</h3>
+            <p></p>
+            
+            <h3>Don't Starve</h3>
+            <p></p>
+
+            <h3>Stardew Valley</h3>
+            <p></p>
+
+            <h3>Rain World</h3>
+            <p></p>
+
+            <h3>Project Zomboid</h3>
+            <p></p>
+
+            <h3>Spelunky 2</h3>
+            <p></p>
+
+            <h3>Getting Over It</h3>
+            <p></p>
+
+            <h3>The Jackbox Party Packs</h3>
+            <p></p>
+
+            <h3>Pathfinder 2e</h3>
+            <p></p>
+
+            <h3>Warhammer 40k</h3>
+            <p></p>
+
+    </main>
+</span>
+</body>
+
+</html>

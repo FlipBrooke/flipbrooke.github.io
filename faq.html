@@ -30,13 +30,23 @@
             </a>
         </li>
         <li>
-            <a href="faq.html">
+            <a href="aboutme.html">
+                About Me
+            </a>
+        </li>
+        <li>
+            <a>
                 FAQ
             </a>
         </li>
         <li>
             <a href="media.html">
                 Media
+            </a>
+        </li>
+        <li>
+            <a href="legal.html">
+                Legal
             </a>
         </li>
         <li style="float:right;">
@@ -77,14 +87,27 @@
         } 
     </script>
 
-    <script>
-        document.body.classList.toggle("lightmode", localStorage.getItem("theme") === "light");
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const darkModeIcon = document.getElementById("darkModeIcon");
+        const isLightMode = localStorage.getItem("theme") === "light";
 
-        function toggleDarkMode() {
-            const isLight = document.body.classList.toggle("lightmode");
-            localStorage.setItem("theme", isLight ? "light" : "dark");
-        }
-    </script>
+        document.body.classList.toggle("lightmode", isLightMode);
+        updateDarkModeIcon(darkModeIcon, isLightMode);
+    });
+
+    function toggleDarkMode() {
+        const darkModeIcon = document.getElementById("darkModeIcon");
+        const isLightMode = document.body.classList.toggle("lightmode");
+
+        localStorage.setItem("theme", isLightMode ? "light" : "dark");
+        updateDarkModeIcon(darkModeIcon, isLightMode);
+    }
+
+    function updateDarkModeIcon(icon, isLightMode) {
+        icon.innerText = isLightMode ? 'dark_mode' : 'light_mode';
+    }
+</script>
 
     <span class="FAQ">
         <h1 style="margin-top: 70px;">FAQ</h1>
@@ -128,9 +151,8 @@
 
             <div class="element2">
                 <div class="imageDesc">
-                    <p>This image is owned by Frederator Studios. The use of this image is to identify their ownership,
-                        and falls under <a target="_blank" href="https://www.copyright.gov/fair-use/index.html">fair
-                            use.</a></p>
+                    <p>This image is owned by <a target="_blank" href="https://en.wikipedia.org/wiki/Frederator_Studios">Frederator Studios</a>, and falls under <a target="_blank" href="https://www.copyright.gov/fair-use/index.html">fair
+                        use.</a> To learn more, visit my <a href="legal.html#sticky">Legal page</a></p>
                 </div>
 
             </div>
@@ -146,10 +168,9 @@
                 and Puppycat for
                 free </a> on
             <a target="_blank" href="https://www.youtube.com/@CartoonHangover"> The youtube channel CartoonHangover</a>,
-            and season two
-            as episodes three though sixteen of <a target="_blank" href="https://www.netflix.com/title/81245457">"Bee
-                and Puppycat: Lazy
-                in Space"</a>
+            and season two, <a target="_blank" href="https://www.netflix.com/title/81245457">"Bee
+                and Puppycat: Lazy 
+                in Space"</a> (episodes three though sixteen),
             on <a target="_blank" href="https://www.netflix.com/">Netflix</a>
         </p>
     </span>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> FlipBrooke.github.io</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,1,0..200&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<body>
+
+    <ul class="topnav">
+        <li style="float:left">
+            <span onclick="sidenavOpen()" class="material-symbols-outlined">
+                menu
+            </span>
+        </li>
+        <li>
+            <a href="index.html">
+                Home
+            </a>
+        </li>
+        <li>
+            <a>
+                About Me
+            </a>
+        </li>
+        <li>
+            <a href="faq.html">
+                FAQ
+            </a>
+        </li>
+        <li>
+            <a href="media.html">
+                Media
+            </a>
+        </li>
+        <li>
+            <a href="legal.html">
+                Legal
+            </a>
+        </li>
+        <li style="float:right;">
+            <span class="material-symbols-outlined">
+                settings
+            </span>
+        </li>
+        <li style="float:right;">
+            <span class="material-symbols-outlined" onclick="toggleDarkMode()" id="darkModeIcon">
+                light_mode
+            </span>
+        </li>
+
+    </ul>
+
+    <div id="sidenav" class="sidenav">
+        <a onclick="sidenavClose()" class="closebtn">
+            <span class="material-symbols-outlined" style="float:left; margin:0; margin-bottom: 100%;">
+                close
+            </span>
+        </a>
+        <a href="#fairuse">Fair Use Policy</a>
+    </div>
+
+    <script>
+        function sidenavOpen() {
+            document.getElementById("sidenav").style.width = "400px"
+        }
+
+        function sidenavClose() {
+            document.getElementById("sidenav").style.width = "0";
+        } 
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const darkModeIcon = document.getElementById("darkModeIcon");
+            const isLightMode = localStorage.getItem("theme") === "light";
+
+            document.body.classList.toggle("lightmode", isLightMode);
+            updateDarkModeIcon(darkModeIcon, isLightMode);
+        });
+
+        function toggleDarkMode() {
+            const darkModeIcon = document.getElementById("darkModeIcon");
+            const isLightMode = document.body.classList.toggle("lightmode");
+
+            localStorage.setItem("theme", isLightMode ? "light" : "dark");
+            updateDarkModeIcon(darkModeIcon, isLightMode);
+        }
+
+        function updateDarkModeIcon(icon, isLightMode) {
+            icon.innerText = isLightMode ? 'dark_mode' : 'light_mode';
+        }
+    </script>
+
+    <main>
+   
+    </main>
+</span>
+</body>
+
+</html>

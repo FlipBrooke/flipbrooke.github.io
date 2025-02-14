@@ -5,8 +5,10 @@
     <title> FlipBrooke.github.io</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
 
@@ -24,31 +26,44 @@
                 menu
             </span>
         </li>
-        <li>
-            <a href="index.html">
-                Home
-            </a>
-        </li>
-        <li>
-            <a href="faq.html">
-                FAQ
-            </a>
-        </li>
-        <li>
-            <a href="media.html">
-                Media
-            </a>
-        </li>
+        <div class="topnavLinks">
+            <li>
+                <a>
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="aboutme.html">
+                    About Me
+                </a>
+            </li>
+            <li>
+                <a href="faq.html">
+                    FAQ
+                </a>
+            </li>
+            <li>
+                <a href="media.html">
+                    Media
+                </a>
+            </li>
+            <li>
+                <a href="legal.html">
+                    Legal
+                </a>
+            </li>
+        </div>
         <li style="float:right;">
             <span class="material-symbols-outlined">
                 settings
             </span>
         </li>
         <li style="float:right;">
-            <span class="material-symbols-outlined" onclick="toggleDarkMode()">
-                dark_mode
+            <span class="material-symbols-outlined" onclick="toggleDarkMode()" id="darkModeIcon">
+                light_mode
             </span>
         </li>
+
 
     </ul>
 
@@ -63,7 +78,6 @@
         <a href="#mywork">Check out my work</a>
     </div>
 
-
     <script>
         function sidenavOpen() {
             document.getElementById("sidenav").style.width = "400px"
@@ -73,15 +87,30 @@
             document.getElementById("sidenav").style.width = "0";
         } 
     </script>
-    
+
     <script>
-        document.body.classList.toggle("lightmode", localStorage.getItem("theme") === "light");
+        document.addEventListener("DOMContentLoaded", () => {
+            const darkModeIcon = document.getElementById("darkModeIcon");
+            const isLightMode = localStorage.getItem("theme") === "light";
+
+            document.body.classList.toggle("lightmode", isLightMode);
+            updateDarkModeIcon(darkModeIcon, isLightMode);
+        });
 
         function toggleDarkMode() {
-            const isLight = document.body.classList.toggle("lightmode");
-            localStorage.setItem("theme", isLight ? "light" : "dark");
+            const darkModeIcon = document.getElementById("darkModeIcon");
+            const isLightMode = document.body.classList.toggle("lightmode");
+
+            localStorage.setItem("theme", isLightMode ? "light" : "dark");
+            updateDarkModeIcon(darkModeIcon, isLightMode);
+        }
+
+        function updateDarkModeIcon(icon, isLightMode) {
+            icon.innerText = isLightMode ? 'dark_mode' : 'light_mode';
         }
     </script>
+
+
 
     <main>
 
@@ -91,10 +120,10 @@
         <img src="/Images/profile.jpg">
 
         <p style="text-indent: 3em;">
-            I'm Brooke, a programmer and creator of things on the internet. 
+            I'm Brooke, a programmer and creator of things on the internet.
             This website is homemade, <a target="_blank" href="https://github.com/FlipBrooke/flipbrooke.github.io">open
                 source</a>, and hosted on <a href="https://pages.github.com/" target="_blank"> GitHub Pages.</a> Check
-                out my stuff if you get the chance!
+            out my stuff if you get the chance!
 
         </p>
         <p>
@@ -110,7 +139,7 @@
         </a>
 
         <a class="linkbutton" style="background-color:#e85543" href="" target="_blank">
-            <img src="/Images/email.png" class="logo";>
+            <img src="/Images/email.png" class="logo" ;>
             <span class="logo"><b>Email</b></span>
         </a>
 
