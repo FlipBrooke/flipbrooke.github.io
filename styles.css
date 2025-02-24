@@ -298,14 +298,21 @@ footer p {
 h1,
 h2,
 h3,
-h4 {
+h4,
+div {
     scroll-margin-top: 70px;
 }
+
 
 .games h2 {
     font-weight: bold;
     color: var(--accent-color);
     font-size: 30pt;
+    margin-top: 2%;
+}
+
+.games p{
+    margin-bottom: 2%;
 }
 
 .games h4 {
@@ -395,4 +402,57 @@ a.genre.wargame {
 
 .legal h2 {
     color: var(--accent-color);
+}
+
+.mediaBox {
+    border: 5px solid var(--accent-color);
+    margin: 0 30%;
+}
+
+.mediaBoxHeader h2{
+    margin: 0;
+    color: var(--background-color);
+}
+
+.mediaBox p{
+    margin: 0;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.mediaBox input{
+
+    display: inline;
+}
+
+.mediaBox button{
+    padding: 0;
+    height: 40px;
+
+}
+
+.mediaBoxHeader{
+    border: 5px solid var(--accent-color);
+    border-bottom: 0;
+    margin: 0 30%;
+    background-color: var(--accent-color);
+
+}
+
+.mediaBox input{
+    width: 150px;
+    font-size: 20px;
+    padding: 10px;
+    padding-bottom: 5px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+}
+
+.mediaName{
+    color: var(--accent-color);
+}
+
+.bold{
+    font-weight:600;
 }

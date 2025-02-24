@@ -25,32 +25,32 @@
             </span>
         </li>
         <div class="pageShortcuts">
-        <li>
-            <a href="index.html">
-                Home
-            </a>
-        </li>
-        <li>
-            <a href="aboutme.html">
-                About Me
-            </a>
-        </li>
-        <li>
-            <a href="faq.html">
-                FAQ
-            </a>
-        </li>
-        <li>
-            <a>
-                Media
-            </a>
-        </li>
-        <li>
-            <a href="legal.html">
-                Legal
-            </a>
-        </li>
-    </div>
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="aboutme.html">
+                    About Me
+                </a>
+            </li>
+            <li>
+                <a href="faq.html">
+                    FAQ
+                </a>
+            </li>
+            <li>
+                <a>
+                    Media
+                </a>
+            </li>
+            <li>
+                <a href="legal.html">
+                    Legal
+                </a>
+            </li>
+        </div>
         <li style="float:right;">
             <span class="material-symbols-outlined">
                 settings
@@ -70,6 +70,7 @@
                 close
             </span>
         </a>
+        <a href="#classLookup">Class Lookup</a>
         <a href="#Videogames">Video Games</a>
         <a href="#NewVegas" class="sublink">Fallout New Vegas</a>
         <a href="#Minecraft" class="sublink">Minecraft</a>
@@ -98,32 +99,50 @@
         } 
     </script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const darkModeIcon = document.getElementById("darkModeIcon");
-        const isLightMode = localStorage.getItem("theme") === "light";
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const darkModeIcon = document.getElementById("darkModeIcon");
+            const isLightMode = localStorage.getItem("theme") === "light";
 
-        document.body.classList.toggle("lightmode", isLightMode);
-        updateDarkModeIcon(darkModeIcon, isLightMode);
-    });
+            document.body.classList.toggle("lightmode", isLightMode);
+            updateDarkModeIcon(darkModeIcon, isLightMode);
+        });
 
-    function toggleDarkMode() {
-        const darkModeIcon = document.getElementById("darkModeIcon");
-        const isLightMode = document.body.classList.toggle("lightmode");
+        function toggleDarkMode() {
+            const darkModeIcon = document.getElementById("darkModeIcon");
+            const isLightMode = document.body.classList.toggle("lightmode");
 
-        localStorage.setItem("theme", isLightMode ? "light" : "dark");
-        updateDarkModeIcon(darkModeIcon, isLightMode);
-    }
+            localStorage.setItem("theme", isLightMode ? "light" : "dark");
+            updateDarkModeIcon(darkModeIcon, isLightMode);
+        }
 
-    function updateDarkModeIcon(icon, isLightMode) {
-        icon.innerText = isLightMode ? 'dark_mode' : 'light_mode';
-    }
-</script>
+        function updateDarkModeIcon(icon, isLightMode) {
+            icon.innerText = isLightMode ? 'dark_mode' : 'light_mode';
+        }
+    </script>
 
     <span class="games">
 
         <h1 style="margin-top: 70px;">Media</h1>
-        <p>This is a large list of media I would recommend! Use the menu button in the top right corner to open the navigation menu.</p>
+        <p>This is a large list of media I would recommend! Use the menu button in the top right corner to open the
+            navigation menu.</p>
+            <div id="classLookup" class="mediaBoxHeader">
+                <h2>Class Lookup</h2>
+            </div>
+        <div class="mediaBox">
+            <p class="bold">Enter the name of a game to see the class I play!</p>
+
+            <h4 id="mediaName" class="mediaName"></h4>
+            <h4 id="className"></h4>
+
+            <input type="search" minlength="1" maxlength="32" id="searchInput" placeholder="Game name">
+            <button id="searchButton">
+                <script class="material-symbols-outlined">
+                    search
+                </script>
+            </button>
+            <script src="classes.js"></script>
+        </div>
 
         <h2 id="Videogames">Video Games</h2>
 
@@ -160,7 +179,7 @@
             <span class="material-symbols-outlined">
                 auto_stories
             </span>
-        Roleplaying
+            Roleplaying
         </a>
         <img src="Images/profile.jpg">
         <p></p>
@@ -191,8 +210,8 @@
         <a class="genre survival"><span class="material-symbols-outlined"> Camping </span> Survival</a>
         <a class="genre platformer">
 
-  <span class="material-symbols-outlined"> sprint</span>
-Platformer</a>
+            <span class="material-symbols-outlined"> sprint</span>
+            Platformer</a>
         <img src="Images/profile.jpg">
         <p></p>
 
@@ -210,20 +229,20 @@ Platformer</a>
         <h4 id="Spelunky">Spelunky 2</h4>
         <a class="genre platformer">
 
-  <span class="material-symbols-outlined"> sprint</span>
-Platformer</a>
-<a class="genre roguelike">
-    <span class="material-symbols-outlined"> all_inclusive </span>
-    Roguelike
-</a>
+            <span class="material-symbols-outlined"> sprint</span>
+            Platformer</a>
+        <a class="genre roguelike">
+            <span class="material-symbols-outlined"> all_inclusive </span>
+            Roguelike
+        </a>
         <img src="Images/profile.jpg">
         <p></p>
 
         <h4 id="GettingOverIt">Getting Over It</h4>
         <a class="genre platformer">
 
-  <span class="material-symbols-outlined"> sprint</span>
-Platformer</a>
+            <span class="material-symbols-outlined"> sprint</span>
+            Platformer</a>
         <img src="Images/profile.jpg">
         <p></p>
 
@@ -244,10 +263,10 @@ Platformer</a>
         <h4 id="Pathfinder">Pathfinder 2e</h4>
         <a class="genre roleplaying">
             <span class="material-symbols-outlined">
-            auto_stories
-        </span>
-        Roleplaying
-    </a>
+                auto_stories
+            </span>
+            Roleplaying
+        </a>
         <img src="Images/profile.jpg">
         <p>
 
