@@ -1,166 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <title> FlipBrooke.github.io</title>
+    <link rel="stylesheet" href="css/styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,1,0..200&display=swap"
-        rel="stylesheet">
 </head>
 
-
 <body>
-
-    <ul class="topnav">
-        <li style="float:left">
-            <span onclick="sidenavOpen()" class="material-symbols-outlined">
-                menu
-            </span>
-        </li>
-        <div class="topnavLinks">
-            <li>
-                <a>
-                    Home
-                </a>
-            </li>
-            <li>
-                <a href="aboutme.html">
-                    About Me
-                </a>
-            </li>
-            <li>
-                <a href="faq.html">
-                    FAQ
-                </a>
-            </li>
-            <li>
-                <a href="media.html">
-                    Media
-                </a>
-            </li>
-            <li>
-                <a href="legal.html">
-                    Legal
-                </a>
-            </li>
+    <div class="everythingBox">
+        <div class="topnav">
+            <a class="nunito-default currentlink"> home</a>
+            <a class="nunito-default"> faq</a>
+            <a class="nunito-default"> projects</a>
         </div>
-        <li style="float:right;">
-            <span class="material-symbols-outlined">
-                settings
-            </span>
-        </li>
-        <li style="float:right;">
-            <span class="material-symbols-outlined" onclick="toggleDarkMode()" id="darkModeIcon">
-                light_mode
-            </span>
-        </li>
+        <div class="banner">
+        </div>
+        <div class="contentBox">
+            <div class="thisBox">
+                <div class="imageContent">
+                    <img src="images/profilePicture.png" class="pfp">
+                    <h1 class="cherry-bomb-one-regular">
+                        flipbrooke
+                    </h1>
+                    <p class="pronouns nunito-default">
+                        she/her
+                    </p>
 
+                    <div class="socials filterbrown">
+                        <img src="icons/youtube.svg" alt="youtube">
+                        <img src="icons/discord.svg" alt="discord">
+                        <img src="icons/github.svg" alt="github">
+                        <img src="icons/bluesky.svg" alt="bluesky">
+                        <img src="icons/steam.svg" alt="steam">
+                    </div>
+                </div>
 
-    </ul>
-
-    <div id="sidenav" class="sidenav">
-        <a onclick="sidenavClose()" class="closebtn">
-            <span class="material-symbols-outlined" style="float:left; margin:0; margin-bottom: 100%;">
-                close
-            </span>
-        </a>
-        <a href="#welcome">Welcome to FlipBrooke.github.io</a>
-        <a href="#reachme">How to reach me</a>
-        <a href="#mywork">Check out my work</a>
+                <div class="textContent">
+                    <h1 class="cherry-bomb-one-regular">
+                        About Me
+                    </h1>
+                    <p class="nunito-default">
+                    Hello! I'm Brooke, a developer and creator on the internet! Odds are if you made it to my <b>WORK IN PROGRESS</b> website, you either encountered me in the wild or are trying to doxx me (Not mutually exclusive)
+                    </p>
+                    <p class="nunito-default">
+                        Placeholder assets for this page come from <a href="https://youtu.be/dop4MTlf_zc?si=UN1IyStebW-4o47r">Bee and Puppycat</a>, produced by <a href="https://frederator.com/">Frederator Studios</a>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <script>
-        function sidenavOpen() {
-            document.getElementById("sidenav").style.width = "400px"
-        }
-
-        function sidenavClose() {
-            document.getElementById("sidenav").style.width = "0";
-        } 
-    </script>
+    <footer>
+        <div id="copyright" class="copyright nunito-default">
+            &copy; 2024 - FlipBrooke - All Rights Reserved.
+        </div>
+    </footer>
 
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const darkModeIcon = document.getElementById("darkModeIcon");
-            const isLightMode = localStorage.getItem("theme") === "light";
-
-            document.body.classList.toggle("lightmode", isLightMode);
-            updateDarkModeIcon(darkModeIcon, isLightMode);
-        });
-
-        function toggleDarkMode() {
-            const darkModeIcon = document.getElementById("darkModeIcon");
-            const isLightMode = document.body.classList.toggle("lightmode");
-
-            localStorage.setItem("theme", isLightMode ? "light" : "dark");
-            updateDarkModeIcon(darkModeIcon, isLightMode);
-        }
-
-        function updateDarkModeIcon(icon, isLightMode) {
-            icon.innerText = isLightMode ? 'dark_mode' : 'light_mode';
-        }
+        (() => {
+            const copyrightElement = document.getElementById("copyright");
+            copyrightElement.innerHTML = "&copy; 2024 - " + new Date().getFullYear() + " FlipBrooke - All Rights Reserved.";
+        })();
     </script>
 
 
-
-    <main>
-        <h2 style="margin-top: 70px; font-size: 50px;" id="welcome">Welcome to</h2>
-        <h1 style="font-size: 50px;">FlipBrooke.github.io!</h1>
-
-        <img src="/Images/profile.jpg">
-
-        <p style="text-indent: 3em;">
-            I'm Brooke, a programmer and creator of things on the internet.
-            This website is homemade, <a target="_blank" href="https://github.com/FlipBrooke/flipbrooke.github.io">open
-                source</a>, and hosted on <a href="https://pages.github.com/" target="_blank"> GitHub Pages.</a> Check
-            out my stuff if you get the chance!
-
-        </p>
-        <p>
-            Some people don't realize my name's a pun on <a target="_blank"
-                href="https://en.wikipedia.org/wiki/Flip_book">"flip
-                book"</a>, The most perfect animation technique ever made!
-        </p>
-
-        <h2 id="reachme">You can reach me via...</h2>
-        <a class="linkbutton" style="background-color:#5865f2" href="" target="_blank">
-            <img src="/Images/profile.jpg" class="logo">
-            <span class="logo"><b>Discord</b></span>
-        </a>
-
-        <a class="linkbutton" style="background-color:#e85543" href="" target="_blank">
-            <img src="/Images/email.png" class="logo" ;>
-            <span class="logo"><b>Email</b></span>
-        </a>
-
-        <h2 id="mywork">Check out my work at...</h2>
-
-        <a class="linkbutton" style="background-color:#e62e2e"
-            href="https://www.youtube.com/channel/UCHMnX2Se1gL5Nwc26NW7FUg" target="_blank">
-            <img src="/Images/yt_icon_mono_dark.png" class="logo">
-            <span class="logo"><b>YouTube</b></span>
-        </a>
-
-        <a class="linkbutton" style="background-color:#171515" href="https://github.com/FlipBrooke" target="_blank">
-            <img src="/Images/github-mark-white.png" class="logo">
-            <span class="logo"><b>GitHub</b></span>
-        </a>
-
-        <a class="linkbutton" style="background-color:#202020" href="" target="_blank">
-            <img src="/Images/profile.jpg" class="logo">
-            <span class="logo"><b>Curse<span style="color: #f87346">Forge</span></b></span>
-        </a>
-
-    </main>
 </body>
 
 </html>
