@@ -88,7 +88,7 @@ max-width: clamp(0px,100vw,1000px);
   p{
     color: var(--text-color);
     margin: 2%;
-    font-size: 2vw
+    font-size: clamp(0px,2em,3vw)
   }
   
   .nunito-default {
@@ -160,9 +160,9 @@ a{
 }
 
 .topnav a{
-    border-radius: 3vw;
+    border-radius: 1em;
     padding: .5vh 2vw;
-    font-size: 2vw;
+    font-size: 2em;
     white-space: nowrap;
     color: #FFFFFF;
     background-color: var(--accent-color);
