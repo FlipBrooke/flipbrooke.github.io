@@ -1,0 +1,183 @@
+:root{
+--accent-color: #935d49;
+--text-color:#935d49;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+html{
+    background-image: url('../images/background.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+div{
+    min-width: 20px;
+    min-height: 20px;
+    margin: auto;
+    display: grid;
+}
+
+.contentBox{
+    background-color: #FFFFFF;
+    border-radius: 0 0 2vw 2vw;
+}
+
+.banner{
+    height: 7vh;
+    background-color: var(--accent-color);
+    border-radius: 2vw 2vw 0 0;
+    border: none;
+    width: 100%;
+}
+
+.pfp{
+    border-radius: 2vw;
+    max-width: 80%;
+    margin-bottom: 0;
+    margin: auto;
+    display: block;
+}
+
+.imageContent{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.textContent{
+    grid-column: 2;
+    width: 100%;
+    display: block;
+    margin-top: -6%;
+}
+
+.textContent p{
+    margin: 3vh;
+}
+
+.thisBox{
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    padding-top: 5%;
+    margin-top: 0;
+}
+
+h1{
+    color: var(--accent-color);
+    margin: 0;
+    text-align: center;
+    line-height: .90;
+    font-size: 4vw
+}
+
+.everythingBox{
+max-width: clamp(0px,100vw,1000px);
+}
+
+.cherry-bomb-one-regular {
+    font-family: "Cherry Bomb One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  p{
+    color: var(--text-color);
+    margin: 2%;
+    font-size: clamp(0px,2em,3vw)
+  }
+  
+  .nunito-default {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .pronouns{
+    color: var(--accent-color);
+    font-weight: 800;
+    text-align: center;
+    margin: 0;
+    margin-bottom: .5vw;
+    margin-top: 1%;
+  }
+
+  .socials{
+grid-template-columns:repeat(5, 1fr);
+gap: 1vw;
+width: 80%;
+place-items: center;
+margin-bottom: 2vh;
+margin-top: 0;
+}
+
+.socials img{
+    width:100%;
+    fill: red;
+    transition: scale .15s;
+}
+
+.socials img:hover{
+    scale: 125%;
+}
+
+.filterbrown{
+    filter: invert(39%) sepia(28%) saturate(710%) hue-rotate(330deg) brightness(96%) contrast(91%);
+}
+
+a{
+    font-weight:700;
+}
+
+.copyright{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: -1;
+    color: black;
+    font-weight: bold;
+    font-size: 2wh;
+    white-space: nowrap;
+    place-items: center;
+    backdrop-filter: blur(.5vw);
+    padding: 0 .25vw;
+    border-radius: 2vw;
+
+}
+
+.topnav{
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 1vw;
+    margin-bottom: 1vh;
+    width:min-content;
+}
+
+.topnav a{
+    border-radius: 1em;
+    padding: .5vh 2vw;
+    font-size: 2em;
+    white-space: nowrap;
+    color: #FFFFFF;
+    background-color: var(--accent-color);
+    pointer-events: none;
+    cursor: default;
+}
+
+.topnav a.currentlink{
+    background-color: var(--accent-color);
+    color: white;
+    border-color: white;
+    font-weight: 900;
+
+}
+
+.topnav a:hover{
+    width: 10vw;
+}
