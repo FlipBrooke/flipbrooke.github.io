@@ -81,7 +81,7 @@ div{
     margin: var(--text-size-paragraph) var(--text-size-paragraph);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (orientation: landscape) {
     .thisBox{
         grid-template-columns: 1fr 1fr;
     }
