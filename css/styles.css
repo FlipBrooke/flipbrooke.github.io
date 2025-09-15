@@ -214,7 +214,6 @@ a{
     scale: 100%;
     transition: scale .15s;
     user-select: none;
-
 }
 
 .topnav a:hover{
