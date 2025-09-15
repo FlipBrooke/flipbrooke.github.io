@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="everythingBox">
+        <div class="topnav">
+            <a class="nunito-default currentlink"> home</a>
+            <a class="nunito-default" href="media.html"> media</a>
+            <a class="nunito-default" href="projects.html"> projects</a>
+        </div>
+
+        <div class="banner">
+        </div>
+
+        <div class="contentBox">
+            <h1 class="error cherry-bomb-one-regular">
+                404
+            </h1>
+
+            <h2 class="nunito-default">The webpage you're looking for does not exist</h2>
+            <img src="">
+        </div>
+    </div>
+    <footer>
+        <a href="legal.html"></a>
+            <div id="copyright" class="copyright nunito-default">
+                &copy; 2024 - FlipBrooke - All Rights Reserved.
+            </div>
+        </a>
+    </footer>
+
+    <script>
+        (() => {
+            const copyrightElement = document.getElementById("copyright");
+            copyrightElement.innerHTML = "&copy; 2024 - " + new Date().getFullYear() + " FlipBrooke - All Rights Reserved.";
+        })();
+    </script>
+</body>
+
+</html>

@@ -116,6 +116,13 @@ margin-bottom: 2vh;
 margin-top: 0;
 }
 
+<<<<<<< Updated upstream
+=======
+img{
+    user-select: none;
+}
+
+>>>>>>> Stashed changes
 .socials img{
     width:100%;
     fill: red;
@@ -168,6 +175,18 @@ a{
     background-color: var(--accent-color);
     pointer-events: none;
     cursor: default;
+<<<<<<< Updated upstream
+=======
+    scale: 100%;
+    transition: scale .15s;
+    user-select: none;
+
+}
+
+.topnav a:hover{
+    scale: 125%;
+    transition: scale .15s;
+>>>>>>> Stashed changes
 }
 
 .topnav a.currentlink{
