@@ -153,7 +153,7 @@ margin-top: 0;
 }
 
 img{
-    attribute
+    user-select: none;
 }
 
 .socials img{
@@ -213,6 +213,7 @@ a{
     cursor: default;
     scale: 100%;
     transition: scale .15s;
+    user-select: none;
 }
 
 .topnav a:hover{
