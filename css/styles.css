@@ -280,3 +280,8 @@ transition: scale .15s;
     color: white;
     font-weight: 500;
 }
+
+.socials a{
+    margin: 0;
+    width: 100%;
+}
