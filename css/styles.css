@@ -97,6 +97,9 @@ div{
 
 
 h1{
+    font-family: "Cherry Bomb One", system-ui;
+    font-weight: 400;
+    font-style: normal;
     color: var(--accent-color);
     text-align: center;
     font-size: var(--text-size-heading);
@@ -127,6 +130,10 @@ max-width: clamp(0px,90vw,1000px);
   p{
     color: var(--text-color);
     font-size: var(--text-size-paragraph);
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
   }
   
   .nunito-default{
@@ -284,4 +291,76 @@ transition: scale .15s;
 .socials a{
     margin: 0;
     width: 100%;
+}
+
+.removalguide{
+margin: 0px 5vw;
+}
+
+.removalguide h1{
+line-height: var(--text-size-heading);
+}
+
+.removalguide p{
+    margin: calc(var(--text-size-paragraph)/2);
+}
+
+
+span{
+    display: inline-block;
+}
+
+.key{
+    background-color: lightgrey;
+    padding: 1px 2px;
+    border-radius: 5px;
+    outline:solid darkgray 1px;
+    color: black;
+    font-family: "Noto Sans", sans-serif;
+    font-size: calc(var(--text-size-paragraph)*.75);
+    box-shadow: 0 2px 2px 2px rgba(0,0,0,.5);
+    margin: 0px 5px;
+    min-width: calc((var(--text-size-paragraph)*.75) + 10px);
+    text-align: center;
+}
+
+.icon{
+    font-family: "Noto Emoji", sans-serif;
+    color: #00a2ed;
+}
+
+.invert{
+    background-color: #00a2ed;
+    color: white;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 2px rgba(0,0,0,.5);    
+}
+
+
+.switch{
+    width: calc(var(--text-size-paragraph)*1.5);
+    offset: -10px;
+    border-radius: 10px;
+    font-size: small;
+    padding: 0px 5px;
+    outline: solid 2px;
+    box-shadow: 0 2px 2px 2px rgba(0,0,0,.5);    
+}
+
+.on{
+    background-color: #00a2ed;
+    text-align: right;
+    color: white;
+    outline-color: lightgray;
+}
+
+.off{
+    color: darkgray;
+}
+
+.search{
+    font-family: "Noto Emoji", sans-serif;
+    outline: 2px solid;
+    padding-right: 10px;
+    border-radius: 5px;
 }
