@@ -36,6 +36,7 @@ div{
     outline: var(--outline-thickness) #935d49 solid;
     outline-offset: -1px;
     width: 100%;
+    margin-bottom: 100px;
 }
 
 .banner{
@@ -111,6 +112,10 @@ h2{
     text-align: center;
     font-size: calc(var(--text-size-heading)*.75);
     margin:0px auto;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
 }
 
 .error {
@@ -190,7 +195,6 @@ a{
     left: 0;
     right: 0;
     margin: 5px auto;
-    margin-top: 100px;
     width: fit-content;
     color: black;
     font-weight: bold;
@@ -221,6 +225,11 @@ a{
     scale: 100%;
     transition: scale .15s;
     user-select: none;
+
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .topnav a:hover{
@@ -293,15 +302,16 @@ transition: scale .15s;
     width: 100%;
 }
 
-.removalguide{
+.removalGuide{
 margin: 0px 5vw;
+padding: 20px 0px;
 }
 
-.removalguide h1{
+.removalGuide h1{
 line-height: var(--text-size-heading);
 }
 
-.removalguide p{
+.removalGuide p{
     margin: calc(var(--text-size-paragraph)/2);
 }
 
@@ -363,4 +373,6 @@ span{
     outline: 2px solid;
     padding-right: 10px;
     border-radius: 5px;
+    background-color: lightgray;
+    color: black;
 }
