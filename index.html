@@ -3,21 +3,20 @@
 
 <head>
     <link rel="stylesheet" href="css/styles.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    
+    <title>FlipBrooke.com - Welcome!</title>
 </head>
 
 <body>
+    <div class="backgroundBox"></div>
     <div class="everythingBox">
         <div class="topnav">
-            <a class="nunito-default currentlink"> home</a>
-            <a class="nunito-default" href="media.html"> media</a>
-            <a class="nunito-default" href="projects.html"> projects</a>
+            <a class="currentlink"> home</a>
+            <a href="media.html"> media</a>
+            <a href="links.html"> links</a>
         </div>
         <div class="banner">
         </div>
@@ -25,10 +24,8 @@
             <div class="thisBox">
                 <div class="imageContent">
                     <img src="images/profilePicture.png" class="pfp">
-                    <h1 class="cherry-bomb-one-regular">
-                        FlipBrooke
-                    </h1>
-                    <p class="pronouns nunito-default">
+                    <h1>FlipBrooke</h1>
+                    <p class="pronouns">
                         PLACEHOLDER TEXT
                     </p>
 
@@ -36,7 +33,7 @@
                         <a href="https://www.youtube.com/@FlipBrooke">
                             <img src="icons/youtube.svg" alt="youtube">
                         </a>
-                        <a>
+                        <a href="https://discordapp.com/users/510620048465854485">
                             <img src="icons/discord.svg" alt="discord">
                         </a>
                         <a href="https://www.github.com/flipbrooke">
@@ -52,22 +49,20 @@
                 </div>
 
                 <div class="textContent">
-                    <h1 class="cherry-bomb-one-regular">
-                        About Me
-                    </h1>
-                    <p class="nunito-default">
+                    <h1>About Me</h1>
+                    <p>
                     Hello! I'm Brooke, a developer and creator of things on the internet!
                     </p>
 
-                    <p class="nunito-default">
+                    <p>
                     Some people don't realize my name's a pun on <a href="https://en.wikipedia.org/wiki/Flip_book" target="_blank">flip book</a>, an animation medium.
                     </p>
 
-                    <p class="nunito-default">
+                    <p>
                         This website is in development! Expect missing or placeholder assets to be used!
                     </p>
 
-                    <p class="nunito-default">
+                    <p>
                         Placeholder assets for this page come from <a href="https://youtu.be/dop4MTlf_zc?si=UN1IyStebW-4o47r" target="_blank">Bee and Puppycat</a>, produced by <a href="https://frederator.com/" target="_blank">Frederator Studios</a>.
                     </p>
                 </div>
@@ -76,20 +71,13 @@
         
     <footer>
         <a href="legal.html">
-            <div id="copyright" class="copyright nunito-default">
+            <div id="copyright" class="copyright">
                     &copy; 2024 - FlipBrooke - All Rights Reserved.
             </div>
         </a>
     </footer>
 
-    <script>
-        (() => {
-            const copyrightElement = document.getElementById("copyright");
-            copyrightElement.innerHTML = "&copy; 2024 - " + new Date().getFullYear() + " FlipBrooke - All Rights Reserved.";
-        })();
-    </script>
-
-
+    <script src="js/generic.js"> </script>
 </body>
 
 </html>

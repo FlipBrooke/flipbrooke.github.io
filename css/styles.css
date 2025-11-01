@@ -5,6 +5,22 @@
 --text-size-heading: 3rem;
 --corner-size: 3rem;
 --outline-thickness: 10px;
+--animation: fadeIn ease-out forwards;
+}
+
+@keyframes fadeIn{
+    from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body{
+    background: linear-gradient(to bottom, #cd9684 0%,#cd9684 11%,#d0977c 22%,#deb48d 33%,#deb48d 44%,#b79573 56%,#b79573 67%,#685756 78%,#635d50 89%,#635d50 100%);
+    background-attachment: fixed;
+
 }
 
 a{
@@ -12,12 +28,30 @@ a{
     color: var(--text-color);
 }
 
-html{
+.backgroundBox{
     background-image: url('../images/background.png');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    animation: backgroundFade ease-out forwards .2s;
+
 }
+
+@keyframes backgroundFade{
+    from {
+      opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
 div{
     margin: auto;
@@ -105,6 +139,7 @@ h1{
     text-align: center;
     font-size: var(--text-size-heading);
     margin:0px auto;
+    animation: var(--animation) 0.2s;
 }
 
 h2{
@@ -116,6 +151,7 @@ h2{
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
+    animation: var(--animation) 0.4s;
 }
 
 .error {
@@ -139,6 +175,7 @@ max-width: clamp(0px,90vw,1000px);
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    animation: var(--animation) 0.6s;
   }
   
   .nunito-default{
@@ -171,6 +208,7 @@ img{
 .socials img{
     width:100%;
     transition: scale .15s;
+    animation: var(--animation) 0.6s;
 }
 
 .socials img:hover{
@@ -205,6 +243,11 @@ a{
     border-radius: var(--corner-size);
     scale: 100%;
     transition: scale .15s;
+
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .topnav{
@@ -221,7 +264,6 @@ a{
     white-space: nowrap;
     color: #FFFFFF;
     background-color: var(--accent-color);
-    cursor: default;
     scale: 100%;
     transition: scale .15s;
     user-select: none;
@@ -271,8 +313,10 @@ transition: scale .15s;
 
 .mediaItem img{
     width: 90%;
-    margin: auto;
-    margin-top: var(--text-size-heading);
+    max-height: 200px;
+    justify-self: center;
+    align-self: end;
+    animation: var(--animation) 0.2s;
 }
 
 .textbox{
@@ -375,4 +419,105 @@ span{
     border-radius: 5px;
     background-color: lightgray;
     color: black;
+    ;
+}
+
+.socialsBox{
+    width: 100%;
+    place-items: center;
+    margin-bottom: 50px;
+}
+
+.socialsBox a{
+    display: flex;
+    font-size: var(--text-size-paragraph);
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    transition: .1s ease-out;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    outline: 4px solid;
+    outline-offset: -1px;
+    margin: 10px 0px;
+    background-color: white;
+    box-shadow: 7px 7px 0px;
+    font-family: "nunito", sans-serif;
+    animation: var(--animation) 0.6s;
+
+}
+
+
+.socialsBox a:hover{
+    scale: 110%;
+}
+
+.socialsBox a img{
+    position: absolute;
+    width: calc(var(--text-size-paragraph)*1.5);
+    left: 25px;
+}
+
+.youtube{
+    color: red;
+}
+
+.discord{
+    color: #5d6eea;
+}
+
+.github{
+    color:#2b2f35;
+}
+
+.bluesky{
+    color:#1888fe;
+}
+
+.steam{
+    color: #192b5a;
+}
+
+.toyhouse{
+    color: black;
+}
+
+.twitch{
+    color: #9146ff;
+}
+
+.tumblr{
+    color: #001935;
+}
+
+.reddit{
+    color:#ff4500;
+}
+
+.twitter{
+    color: #249ef0;
+}
+
+.email{
+    color: salmon;
+}
+
+.linksPic{
+    margin: 10px auto;
+    transition: .2s;
+    scale: 90%;
+    filter:drop-shadow( 0px 10px 20px #6e98f5);
+}
+
+.linksPic:hover{
+    scale: 100%;
+}
+
+.links{
+    animation: var(--animation) 0.2s;
+    background-image: url('../images/game.png');
+    background-position: center;
+    background-size: cover;
 }
