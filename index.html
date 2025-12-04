@@ -2,82 +2,103 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    
-    <title>FlipBrooke.com - Welcome!</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+
+  <title>FlipBrooke.com - Welcome!</title>
 </head>
 
 <body>
-    <div class="backgroundBox"></div>
+
+
+  <div class="backgroundBox">
+    <div id="site-header" class="topnav"></div>
+
+    <script>
+      fetch("/header.html")
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById("site-header").innerHTML = html;
+        });
+    </script>
+
     <div class="everythingBox">
-        <div class="topnav">
-            <a class="currentlink"> home</a>
-            <a href="media.html"> media</a>
-            <a href="links.html"> links</a>
-        </div>
-        <div class="banner">
-        </div>
-        <div class="contentBox">
-            <div class="thisBox">
-                <div class="imageContent">
-                    <img src="images/profilePicture.png" class="pfp">
-                    <h1>FlipBrooke</h1>
-                    <p class="pronouns">
-                        PLACEHOLDER TEXT
-                    </p>
 
-                    <div class="socials filterbrown">
-                        <a href="https://www.youtube.com/@FlipBrooke">
-                            <img src="icons/youtube.svg" alt="youtube">
-                        </a>
-                        <a href="https://discordapp.com/users/510620048465854485">
-                            <img src="icons/discord.svg" alt="discord">
-                        </a>
-                        <a href="https://www.github.com/flipbrooke">
-                            <img src="icons/github.svg" alt="github">
-                        </a>
-                        <a href="https://bsky.app/profile/flipbrooke.com">
-                            <img src="icons/bluesky.svg" alt="bluesky">
-                        </a>
-                        <a href="https://steamcommunity.com/id/flipbrooke/">
-                            <img src="icons/steam.svg" alt="steam">
-                        </a>
-                    </div>
-                </div>
+      <div class="contentBox">
+        <div class="banner"></div>
 
-                <div class="textContent">
-                    <h1>About Me</h1>
-                    <p>
-                    Hello! I'm Brooke, a developer and creator of things on the internet!
-                    </p>
+        <div class="thisBox">
 
-                    <p>
-                    Some people don't realize my name's a pun on <a href="https://en.wikipedia.org/wiki/Flip_book" target="_blank">flip book</a>, an animation medium.
-                    </p>
+          <div class="imageContent">
+            <img src="/images/profilePicture.png" alt="Profile" width="150" height="150" class="pfp" />
+            <h1>FlipBrooke</h1>
+            <p class="pronouns">PLACEHOLDER TEXT</p>
 
-                    <p>
-                        This website is in development! Expect missing or placeholder assets to be used!
-                    </p>
-
-                    <p>
-                        Placeholder assets for this page come from <a href="https://youtu.be/dop4MTlf_zc?si=UN1IyStebW-4o47r" target="_blank">Bee and Puppycat</a>, produced by <a href="https://frederator.com/" target="_blank">Frederator Studios</a>.
-                    </p>
-                </div>
+            <div class="socials filtersvg">
+              <a href="https://www.youtube.com/@FlipBrooke">
+                <img src="/icons/youtube.svg" alt="youtube" width="24" height="24" />
+              </a>
+              <a href="https://discordapp.com/users/510620048465854485">
+                <img src="/icons/discord.svg" alt="discord" width="24" height="24" />
+              </a>
+              <a href="https://www.github.com/flipbrooke">
+                <img src="/icons/github.svg" alt="github" width="24" height="24" />
+              </a>
+              <a href="https://bsky.app/profile/flipbrooke.com">
+                <img src="/icons/bluesky.svg" alt="bluesky" width="24" height="24" />
+              </a>
+              <a href="https://steamcommunity.com/id/flipbrooke/">
+                <img src="/icons/steam.svg" alt="steam" width="24" height="24" />
+              </a>
             </div>
-        </div>
-        
-    <footer>
-        <a href="legal.html">
-            <div id="copyright" class="copyright">
-                    &copy; 2024 - FlipBrooke - All Rights Reserved.
-            </div>
-        </a>
-    </footer>
+          </div>
 
-    <script src="js/generic.js"> </script>
+          <div class="textContent">
+            <h1>About Me</h1>
+            <p>Hello! I'm Brooke, a developer and creator of things on the internet!</p>
+
+            <p>
+              Some people don't realize my name's a pun on
+              <a href="https://en.wikipedia.org/wiki/Flip_book" target="_blank" rel="noopener noreferrer">flip book</a>,
+              an animation medium.
+            </p>
+
+            <p>This website is in development! Expect missing or placeholder assets to be used!</p>
+
+            <p>
+              Placeholder assets for this page come from
+              <a href="https://youtu.be/dop4MTlf_zc?si=UN1IyStebW-4o47r" target="_blank" rel="noopener noreferrer">
+                Bee and Puppycat
+              </a>,
+              produced by
+              <a href="https://frederator.com/" target="_blank" rel="noopener noreferrer">
+                Frederator Studios
+              </a>.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+<div id="site-footer"></div>
+<script>
+  fetch("/footer.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("site-footer").innerHTML = html;
+
+      const yearElement = document.getElementById('year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    });
+</script>
+
 </body>
 
 </html>

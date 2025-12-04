@@ -1,11 +1,13 @@
 :root{
---accent-color: #935d49;
---text-color:#935d49;
+--accent-color: #b7dbe6;
+--text-color:#f0eff1;
 --text-size-paragraph: 1.5rem;
 --text-size-heading: 3rem;
---corner-size: 3rem;
+--corner-size: 2rem;
 --outline-thickness: 10px;
 --animation: fadeIn ease-out forwards;
+--background-color: rgba(0, 0, 0, .5);
+font-family: Kablammo;
 }
 
 @keyframes fadeIn{
@@ -18,40 +20,17 @@
 }
 
 body{
-    background: linear-gradient(to bottom, #cd9684 0%,#cd9684 11%,#d0977c 22%,#deb48d 33%,#deb48d 44%,#b79573 56%,#b79573 67%,#685756 78%,#635d50 89%,#635d50 100%);
     background-attachment: fixed;
-
+    background-position: center;
+    background-size: cover;
+    background-image: url('../images/background.png');
 }
 
 a{
     text-decoration: none;
     color: var(--text-color);
+    font-weight:500;
 }
-
-.backgroundBox{
-    background-image: url('../images/background.png');
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    animation: backgroundFade ease-out forwards .2s;
-
-}
-
-@keyframes backgroundFade{
-    from {
-      opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 
 div{
     margin: auto;
@@ -60,31 +39,35 @@ div{
     /*
     outline: 2px red solid;
     min-width: 20px;
-    min-height: 20px;
+    min-height: 20px;   
     */
 }
 
 .contentBox{
-    background-color: #FFFFFF;
+    margin: calc(var(--text-size-heading)*1.5) 0px;
+    background-color: var(--background-color);
     border-radius: 0 0 var(--corner-size) var(--corner-size);
-    outline: var(--outline-thickness) #935d49 solid;
+    outline: var(--outline-thickness) var(--accent-color) solid;
     outline-offset: -1px;
     width: 100%;
-    margin-bottom: 100px;
+    border-radius: var(--corner-size);
+    max-width: 1000px;
 }
 
 .banner{
-    height: var(--text-size-heading);
+    margin-top: 0px;
+    height: calc(var(--text-size-heading)*.75);
     background-color: var(--accent-color);
     border-radius: var(--corner-size) var(--corner-size) 0 0;
     border: none;
     width: 100%;
-    outline: var(--outline-thickness) var(--accent-color) solid;
-    outline-offset: -1px;
 }
 
 .pfp{
     border-radius: var(--corner-size);
+    width: auto;
+    height: auto;
+
     max-width: 80%;
     margin: auto;
     margin-top: 2rem;
@@ -132,14 +115,12 @@ div{
 
 
 h1{
-    font-family: "Cherry Bomb One", system-ui;
-    font-weight: 400;
-    font-style: normal;
     color: var(--accent-color);
     text-align: center;
     font-size: var(--text-size-heading);
     margin:0px auto;
     animation: var(--animation) 0.2s;
+    margin-top: var(--text-size-paragraph);
 }
 
 h2{
@@ -147,10 +128,6 @@ h2{
     text-align: center;
     font-size: calc(var(--text-size-heading)*.75);
     margin:0px auto;
-    font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
     animation: var(--animation) 0.4s;
 }
 
@@ -159,40 +136,26 @@ h2{
 }
 
 .everythingBox{
-max-width: clamp(0px,90vw,1000px);
+width: clamp(0px,90vw,1000px);
 }
 
-.cherry-bomb-one-regular {
-    font-family: "Cherry Bomb One", system-ui;
-    font-weight: 400;
-    font-style: normal;
-  }
+p{
+color: var(--text-color);
+font-size: var(--text-size-paragraph);
+animation: var(--animation) 0.6s;
+margin-left: min(5vw);
+margin-right: min(5vw);
+text-align: center;
+}
 
-  p{
-    color: var(--text-color);
-    font-size: var(--text-size-paragraph);
-    font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    animation: var(--animation) 0.6s;
-  }
-  
-  .nunito-default{
-    font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-  }
+p.pronouns{
+color: var(--accent-color);
+font-weight: 800;
+text-align: center;
+margin: calc(var(--text-size-paragraph)/2);
+}
 
-  .pronouns{
-    color: var(--accent-color);
-    font-weight: 800;
-    text-align: center;
-    margin: 0;
-  }
-
-  .socials{
+.socials{
 grid-template-columns:repeat(5, 1fr);
 gap: calc(var(--text-size-paragraph)/2);
 width: 60%;
@@ -212,15 +175,14 @@ img{
 }
 
 .socials img:hover{
-    scale: 125%;
+    transform:rotate(-5deg) scale(125%);
 }
 
-.filterbrown{
-    filter: invert(39%) sepia(28%) saturate(710%) hue-rotate(330deg) brightness(96%) contrast(91%);
-}
+.filtersvg a img{
+    filter:invert();
+    height: var(--text-size-heading);
+    width: var(--text-size-heading);
 
-a{
-    font-weight:700;
 }
 
 .copyright:hover{
@@ -235,7 +197,6 @@ a{
     margin: 5px auto;
     width: fit-content;
     color: black;
-    font-weight: bold;
     white-space: nowrap;
     place-items: center;
     backdrop-filter: blur(10px);
@@ -243,44 +204,34 @@ a{
     border-radius: var(--corner-size);
     scale: 100%;
     transition: scale .15s;
-
-    font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
 }
 
 .topnav{
-    grid-template-columns: repeat(3, 1fr);
+    position: fixed;
+    columns:auto;
     text-align: center;
-    gap: var(--text-size-paragraph);
-    margin-bottom: var(--text-size-paragraph);
+    grid-auto-flow: column;
+    justify-content: center;
+    grid-auto-columns: max-content;
+    background-color: black;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    gap: 10vw;
+    height: var(--text-size-heading);
+    align-items: center;
 }
 
 .topnav a{
-    border-radius: 100vw;
-    padding: 0.5rem 1rem;
     font-size: var(--text-size-paragraph);
     white-space: nowrap;
-    color: #FFFFFF;
-    background-color: var(--accent-color);
-    scale: 100%;
+    color: var(--accent-color);
     transition: scale .15s;
     user-select: none;
-
-    font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-}
-
-.topnav a:hover{
-    scale: 125%;
-    transition: scale .15s;
-}
-
-.topnav a.currentlink{
-    font-weight: 900;
+    cursor: pointer;
+    scale: 100%;
+    width: fit-content;
 }
 
 .copyright a{
@@ -332,94 +283,18 @@ transition: scale .15s;
 .textbox p{
     color: white;
     font-size: calc(var(--text-size-paragraph)*.75);
-    margin: auto 10%;
+    margin: auto 5%;
     margin-top: calc(var(--text-size-paragraph)/2);
+    text-align: center;
 }
 
 .textbox a{
     color: white;
-    font-weight: 500;
 }
 
 .socials a{
     margin: 0;
     width: 100%;
-}
-
-.removalGuide{
-margin: 0px 5vw;
-padding: 20px 0px;
-}
-
-.removalGuide h1{
-line-height: var(--text-size-heading);
-}
-
-.removalGuide p{
-    margin: calc(var(--text-size-paragraph)/2);
-}
-
-
-span{
-    display: inline-block;
-}
-
-.key{
-    background-color: lightgrey;
-    padding: 1px 2px;
-    border-radius: 5px;
-    outline:solid darkgray 1px;
-    color: black;
-    font-family: "Noto Sans", sans-serif;
-    font-size: calc(var(--text-size-paragraph)*.75);
-    box-shadow: 0 2px 2px 2px rgba(0,0,0,.5);
-    margin: 0px 5px;
-    min-width: calc((var(--text-size-paragraph)*.75) + 10px);
-    text-align: center;
-}
-
-.icon{
-    font-family: "Noto Emoji", sans-serif;
-    color: #00a2ed;
-}
-
-.invert{
-    background-color: #00a2ed;
-    color: white;
-    border-radius: 2px;
-    box-shadow: 0 2px 2px 2px rgba(0,0,0,.5);    
-}
-
-
-.switch{
-    width: calc(var(--text-size-paragraph)*1.5);
-    offset: -10px;
-    border-radius: 10px;
-    font-size: small;
-    padding: 0px 5px;
-    outline: solid 2px;
-    box-shadow: 0 2px 2px 2px rgba(0,0,0,.5);    
-}
-
-.on{
-    background-color: #00a2ed;
-    text-align: right;
-    color: white;
-    outline-color: lightgray;
-}
-
-.off{
-    color: darkgray;
-}
-
-.search{
-    font-family: "Noto Emoji", sans-serif;
-    outline: 2px solid;
-    padding-right: 10px;
-    border-radius: 5px;
-    background-color: lightgray;
-    color: black;
-    ;
 }
 
 .socialsBox{
@@ -444,11 +319,9 @@ span{
     margin: 10px 0px;
     background-color: white;
     box-shadow: 7px 7px 0px;
-    font-family: "nunito", sans-serif;
     animation: var(--animation) 0.6s;
 
 }
-
 
 .socialsBox a:hover{
     scale: 110%;
@@ -506,18 +379,19 @@ span{
 
 .linksPic{
     margin: 10px auto;
-    transition: .2s;
     scale: 90%;
-    filter:drop-shadow( 0px 10px 20px #6e98f5);
+    transition: .2s;
+
 }
 
 .linksPic:hover{
     scale: 100%;
+
 }
 
 .links{
     animation: var(--animation) 0.2s;
-    background-image: url('../images/game.png');
+    background-image: url('/images/game.png');
     background-position: center;
     background-size: cover;
 }
