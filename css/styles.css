@@ -7,7 +7,7 @@
 --outline-thickness: 10px;
 --animation: fadeIn ease-out forwards;
 --background-color: rgba(0, 0, 0, .5);
-font-family: Kablammo;
+font-family: "Roboto", sans-serif;
 }
 
 @keyframes fadeIn{
