@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/vtt.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+  <title>FlipBrooke.com - Legal</title>
+</head>
+
+<body>
+  <div class="backgroundBox">
+    <div id="site-header" class="topnav"></div>
+
+    <script>
+      fetch("/header.html")
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById("site-header").innerHTML = html;
+        });
+    </script>
+    <div class="everythingBox">
+      <main class="contentBox">
+        <section class="thisBox">
+            <h1>Foundry Virtual Tabletop</h1>
+            <p>Here you can connect to our Foundry virtual tabletop server! Sign in required.</p>
+            <a class="connectButton">Connect To Server</a>
+            <p> This server is not affiliated with Foundy VTT!</p>
+            <p> Report any technical issues to Brooke!</p>
+        </section>
+      </main>
+    </div>
+    
+<div id="site-footer"></div>
+<script>
+  fetch("/footer.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("site-footer").innerHTML = html;
+
+      const yearElement = document.getElementById('year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    });
+</script>
+</body>
+
+</html>

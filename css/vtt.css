@@ -1,0 +1,54 @@
+:root{
+--accent-color: #fa7724;
+--text-color:#f0eff1;
+--text-size-paragraph: 1.5rem;
+--text-size-heading: 3rem;
+--corner-size: 2rem;
+--outline-thickness: 10px;
+--animation: fadeIn ease-out forwards;
+--background-color: rgba(0, 0, 0, .5);
+font-family: "Roboto", sans-serif;
+}
+
+body{
+    background-color: black;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../images/foundry.webp');
+}
+
+p{
+ color: #e7d1b1;
+}
+
+h1{
+    color:white;
+}
+
+.contentBox{
+    margin: calc(var(--text-size-heading)*1.5) 0px;
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: var(--text-size-paragraph);
+    outline: none;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.connectButton{
+    display: flex;
+    background-color: #fa7724;
+    outline: 2px solid #ff8f20;
+    outline-offset: -1px;
+    justify-content: center;
+    margin: auto;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 20px;
+    scale: 100%;
+    transition: scale .3s;
+}
+
+.connectButton:hover{
+    scale: 110%
+}
