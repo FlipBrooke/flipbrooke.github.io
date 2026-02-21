@@ -209,6 +209,7 @@ img{
 }
 
 .topnav{
+    display: grid;
     position: fixed;
     columns:auto;
     text-align: center;
@@ -333,4 +334,8 @@ transition: scale .15s;
     position: absolute;
     width: calc(var(--text-size-paragraph)*1.5);
     left: 25px;
+}
+
+.headerLinks{
+    overflow-x: auto;
 }

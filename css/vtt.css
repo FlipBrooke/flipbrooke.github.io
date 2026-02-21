@@ -47,8 +47,13 @@ h1{
     border-radius: 20px;
     scale: 100%;
     transition: scale .3s;
+    color: var(--text-color)
 }
 
 .connectButton:hover{
-    scale: 110%
+    scale: 110%;
+}
+
+a{
+    color: var(--accent-color);
 }
