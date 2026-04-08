@@ -1,25 +1,26 @@
-:root{
---accent-color: #b7dbe6;
---text-color:#f0eff1;
---text-size-paragraph: 1.5rem;
---text-size-heading: 3rem;
---corner-size: 2rem;
---outline-thickness: 10px;
---animation: fadeIn ease-out forwards;
---background-color: rgba(0, 0, 0, .5);
-font-family: "Roboto", sans-serif;
+:root {
+    --accent-color: #b7dbe6;
+    --text-color: #f0eff1;
+    --text-size-paragraph: 1.5rem;
+    --text-size-heading: 3rem;
+    --corner-size: 2rem;
+    --outline-thickness: 10px;
+    --animation: fadeIn ease-out forwards;
+    --background-color: rgba(0, 0, 0, .5);
+    font-family: "Roboto", sans-serif;
 }
 
-@keyframes fadeIn{
+@keyframes fadeIn {
     from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
-body{
+body {
     background-color: black;
     background-attachment: fixed;
     background-position: center;
@@ -27,13 +28,13 @@ body{
     background-image: url('../images/background.png');
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--text-color);
-    font-weight:500;
+    font-weight: 500;
 }
 
-div{
+div {
     margin: auto;
     display: grid;
 
@@ -44,27 +45,20 @@ div{
     */
 }
 
-.contentBox{
-    margin: calc(var(--text-size-heading)*1.5) 0px;
+.contentBox {
+    margin: calc(var(--text-size-heading)*1) 0px;
     background-color: var(--background-color);
     border-radius: 0 0 var(--corner-size) var(--corner-size);
-    outline: var(--outline-thickness) var(--accent-color) solid;
     outline-offset: -1px;
     width: 100%;
-    border-radius: var(--corner-size);
-    max-width: 1000px;
+    outline: var(--outline-thickness) var(--accent-color) solid;
 }
 
-.banner{
-    margin-top: 0px;
-    height: calc(var(--text-size-heading)*.75);
-    background-color: var(--accent-color);
-    border-radius: var(--corner-size) var(--corner-size) 0 0;
-    border: none;
-    width: 100%;
+.banner {
+    height: 0px;
 }
 
-.pfp{
+.pfp {
     border-radius: var(--corner-size);
     width: auto;
     height: auto;
@@ -76,123 +70,143 @@ div{
     display: block;
 }
 
-.imageContent{
+.imageContent {
     display: block;
     width: 100%;
     height: 100%;
 }
 
-.textContent{
+.textContent {
     width: 100%;
     display: block;
     margin-top: 0px;
 }
 
 
-.thisBox{
+.thisBox {
     margin: auto;
-    padding-top:0px;
+    padding-top: 0px;
     margin-top: 0;
     margin-bottom: var(--text-size-paragraph);
 }
 
-.thisBox p{
+.thisBox p {
     margin: var(--text-size-paragraph) var(--text-size-paragraph);
 }
 
 @media screen and (orientation: landscape) {
-    .thisBox{
+    .thisBox {
         grid-template-columns: 1fr 1fr;
     }
 
-    .textContent{
-         grid-column: 2;
+    .textContent {
+        grid-column: 2;
     }
 
-    .banner{
+    .banner {
+            margin-top: 0px;
+        background-color: var(--accent-color);
+        border: none;
+        width: 100%;
         height: calc(var(--text-size-heading)*1.5);
+        border-radius: var(--corner-size) var(--corner-size) 0 0;
+
+    }
+
+    .everythingBox {
+        width: clamp(0px, 90vw, 1000px);
+    }
+
+    .contentBox {
+        outline: var(--outline-thickness) var(--accent-color) solid;
+        border-radius: var(--corner-size);
+        margin: calc(var(--text-size-heading)*1.5) 0px;
     }
 }
 
 
-h1{
+h1 {
     color: var(--accent-color);
     text-align: center;
     font-size: var(--text-size-heading);
-    margin:0px auto;
+    margin: 0px auto;
     animation: var(--animation) 0.2s;
     margin-top: var(--text-size-paragraph);
 }
 
-h2{
+h2 {
     color: var(--accent-color);
     text-align: center;
     font-size: calc(var(--text-size-heading)*.75);
-    margin:0px auto;
+    margin: 0px auto;
     animation: var(--animation) 0.4s;
+}
+
+h3 {
+    color: var(--accent-color);
+    text-align: center;
+    font-size: calc(var(--text-size-heading)*.5);
+    margin: 0px auto;
+    animation: var(--animation) 0.6s;
 }
 
 .error {
     font-size: calc(var(--text-size-heading)*2);
 }
 
-.everythingBox{
-width: clamp(0px,90vw,1000px);
+p {
+    color: var(--text-color);
+    font-size: var(--text-size-paragraph);
+    animation: var(--animation) 0.6s;
+    margin-left: min(5vw);
+    margin-right: min(5vw);
+    text-align: center;
 }
 
-p{
-color: var(--text-color);
-font-size: var(--text-size-paragraph);
-animation: var(--animation) 0.6s;
-margin-left: min(5vw);
-margin-right: min(5vw);
-text-align: center;
+p.pronouns {
+    color: var(--accent-color);
+    font-weight: 800;
+    text-align: center;
+    margin: calc(var(--text-size-paragraph)/2);
 }
 
-p.pronouns{
-color: var(--accent-color);
-font-weight: 800;
-text-align: center;
-margin: calc(var(--text-size-paragraph)/2);
+.socials {
+    grid-template-columns: repeat(5, 1fr);
+    gap: calc(var(--text-size-paragraph)/2);
+    width: clamp(0px, fit-content, 80%);
+    place-items: center;
+    margin-bottom: 2vh;
+    margin-top: 0;
+    margin: 0% 10%
 }
 
-.socials{
-grid-template-columns:repeat(5, 1fr);
-gap: calc(var(--text-size-paragraph)/2);
-width: clamp(0px,fit-content,80%);
-place-items: center;
-margin-bottom: 2vh;
-margin-top: 0;
-margin: 0% 10%
-}
-
-img{
+img {
     user-select: none;
 }
 
-.socials img{
-    width:100%;
+.socials img {
+    width: 100%;
     transition: scale .15s;
     animation: var(--animation) 0.6s;
 }
 
-.socials img:hover{
-    transform:rotate(-5deg) scale(125%);
+.socials img:hover {
+    transform: rotate(-5deg) scale(125%);
 }
 
-.filtersvg a img{
-    filter:invert();
+.filtersvg a img {
+    filter: invert();
     height: var(--text-size-heading);
     width: var(--text-size-heading);
 
 }
 
-.copyright:hover{
+.copyright:hover {
     scale: 125%;
 }
 
-.copyright{
-    background-color: rgba(255,255,255,.3);
+.copyright {
+    background-color: rgba(255, 255, 255, .3);
     bottom: 0;
     left: 0;
     right: 0;
@@ -208,10 +222,10 @@ img{
     transition: scale .15s;
 }
 
-.topnav{
+.topnav {
     display: grid;
     position: fixed;
-    columns:auto;
+    columns: auto;
     text-align: center;
     grid-auto-flow: column;
     justify-content: center;
@@ -226,7 +240,7 @@ img{
     align-items: center;
 }
 
-.topnav a{
+.topnav a {
     font-size: var(--text-size-paragraph);
     white-space: nowrap;
     color: var(--accent-color);
@@ -237,35 +251,35 @@ img{
     width: fit-content;
 }
 
-.copyright a{
+.copyright a {
     color: blue;
 }
 
-.mediaScrollable{
+.mediaScrollable {
     width: 100%;
     display: inline-grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-items: center;
 }
 
-.mediaItem{
-width: 300px;
-height: 400px;
-overflow: hidden;
-background-size: auto 100%;
-background-position: center;
-border-radius: var(--corner-size);
-scale: 90%;
-transition: scale .15s;
-box-shadow: 10px 20px 10px 0px rgba(0, 0, 0, .3);
+.mediaItem {
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    background-size: auto 100%;
+    background-position: center;
+    border-radius: var(--corner-size);
+    scale: 90%;
+    transition: scale .15s;
+    box-shadow: 10px 20px 10px 0px rgba(0, 0, 0, .3);
 }
 
-.mediaItem:hover{
-scale: 100%;
-transition: scale .15s;
+.mediaItem:hover {
+    scale: 100%;
+    transition: scale .15s;
 }
 
-.mediaItem img{
+.mediaItem img {
     width: 90%;
     max-height: 200px;
     justify-self: center;
@@ -273,17 +287,17 @@ transition: scale .15s;
     animation: var(--animation) 0.2s;
 }
 
-.textbox{
+.textbox {
     position: relative;
     size: 100px 100px;
     margin: auto;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0, 0, 0, .5);
     margin-bottom: 0px;
     width: 100%;
     height: 200px;
 }
 
-.textbox p{
+.textbox p {
     color: white;
     font-size: calc(var(--text-size-paragraph)*.75);
     margin: auto 5%;
@@ -291,22 +305,22 @@ transition: scale .15s;
     text-align: center;
 }
 
-.textbox a{
+.textbox a {
     color: white;
 }
 
-.socials a{
+.socials a {
     margin: 0;
     width: 100%;
 }
 
-.socialsBox{
+.socialsBox {
     width: 100%;
     place-items: center;
     margin-bottom: 50px;
 }
 
-.socialsBox a{
+.socialsBox a {
     display: flex;
     font-size: var(--text-size-paragraph);
     width: 300px;
@@ -326,16 +340,16 @@ transition: scale .15s;
 
 }
 
-.socialsBox a:hover{
+.socialsBox a:hover {
     scale: 110%;
 }
 
-.socialsBox a img{
+.socialsBox a img {
     position: absolute;
     width: calc(var(--text-size-paragraph)*1.5);
     left: 25px;
 }
 
-.headerLinks{
+.headerLinks {
     overflow-x: auto;
 }

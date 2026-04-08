@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+  <title>FlipBrooke.com - Frequently Asked Questions</title>
+</head>
+
+<body>
+  <div class="backgroundBox">
+    <div id="site-header" class="topnav"></div>
+
+    <script>
+      fetch("/header.html")
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById("site-header").innerHTML = html;
+        });
+    </script>
+
+    <div class="everythingBox">
+      <div class="contentBox">
+        <div class="banner"></div>
+        <h1>FAQ</h1>
+        <p>Here's a list of questions i'm asked often. This is not an About Me, so it will not always include a lot of context.</p>
+        <p></p>
+        <h3>Why do you know so much about goats? Why is your branding goat/themed?</h3>
+        <p>There's no secret deeper meaning. Goats are my favorite animal, and i've loved Greco-Roman Mythology since the fourth grade, so I used a satyr/faun in my online branding. Some of the things I like about goats specifically are their playful and chaotic demeanor, their cleverness and curiosity, and how many weird litle quirks are unique to just them as a species.</p>
+        <p></p>
+        <h3>Why do you need a website? What's the point of this site?</h3>
+        <p>Mostly for fun and to learn web development. This site is also currently used to host Pathfinder 2e sessions, stream media, send emails, and to self-host a rotating selection of apps for myself.</p>
+        <p></p>
+        <h3>Why is this website frameworkless?</h3>
+        <p>This site's a place for me to learn. I feel that a frameworkless aproach is the best way for me to learn baseline webdev skills. However, if I ever feel I've learned enough this way, I'll switch this site over to a framework.</p>
+
+
+        </div>
+      </div>
+    </div>
+    <div id="site-footer"></div>
+    <script>
+      fetch("/footer.html")
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById("site-footer").innerHTML = html;
+
+          const yearElement = document.getElementById('year');
+          if (yearElement) {
+            yearElement.textContent = new Date().getFullYear();
+          }
+        });
+    </script>
+</body>
+
+</html>
